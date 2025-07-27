@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Tilt from 'react-tilt';
 import ProjectCard from './ProjectCard';
 import projects from './projectsData';
 
@@ -11,13 +12,17 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <motion.div
             key={project.title}
-            className="transform transition-transform hover:scale-105"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <ProjectCard project={project} />
+            <Tilt
+              options={{ max: 15, scale: 1 }}
+              className="transform transition-transform hover:scale-105"
+            >
+              <ProjectCard project={project} />
+            </Tilt>
           </motion.div>
         ))}
       </div>
