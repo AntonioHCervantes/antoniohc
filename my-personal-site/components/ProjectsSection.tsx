@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import ProjectCard from './ProjectCard';
 import projects from './projectsData';
 
@@ -18,7 +18,9 @@ export default function ProjectsSection() {
             transition={{ duration: 0.5 }}
           >
             <Tilt
-              options={{ max: 15, scale: 1 }}
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
+              scale={1}
               className="transform transition-transform hover:scale-105"
             >
               <ProjectCard project={project} />
