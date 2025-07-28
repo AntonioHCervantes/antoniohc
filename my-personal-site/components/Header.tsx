@@ -12,11 +12,11 @@ export default function Header() {
     <header className="w-full fixed top-0 left-0 bg-background/80 backdrop-blur z-10">
       <nav className="max-w-5xl mx-auto flex items-center justify-between p-4 relative">
         <span className="font-bold">Mi Sitio</span>
-        <button className="md:hidden text-2xl" onClick={toggleMenu} aria-label="Toggle menu">
+        <button className="text-2xl" onClick={toggleMenu} aria-label="Toggle menu">
           ☰
         </button>
         <ul
-          className={`absolute md:static top-full left-0 right-0 bg-background md:bg-transparent shadow md:shadow-none p-4 md:p-0 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4 text-sm ${open ? 'block' : 'hidden'} md:block`}
+          className={`absolute top-full left-0 right-0 bg-background shadow p-4 flex flex-col items-start space-y-2 text-sm ${open ? 'block' : 'hidden'}`}
         >
           <li><Link href="#hero" onClick={() => setOpen(false)}>Inicio</Link></li>
           <li><Link href="#about" onClick={() => setOpen(false)}>Sobre mí</Link></li>
