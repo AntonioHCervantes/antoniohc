@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
-
-const ParallaxProvider = dynamic(
-  () =>
-    import("react-scroll-parallax").then((m) => m.ParallaxProvider),
-  { ssr: false }
-);
-
-const AnimatedBackground = dynamic(
-  () => import("../components/AnimatedBackground"),
-  { ssr: false }
-);
+import Providers from "../components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,10 +26,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ParallaxProvider>
-          <AnimatedBackground />
+        <Providers>
           {children}
-        </ParallaxProvider>
+        </Providers>
       </body>
     </html>
   );

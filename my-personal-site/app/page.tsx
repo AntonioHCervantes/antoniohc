@@ -5,12 +5,7 @@ import Timeline from '../components/Timeline';
 import Skills from '../components/Skills';
 import ProjectsSection from '../components/ProjectsSection';
 import Contact from '../components/Contact';
-import dynamic from 'next/dynamic';
-
-const ParallaxSection = dynamic(
-  () => import('../components/ParallaxSection'),
-  { ssr: false }
-);
+import ParallaxSection from '../components/ParallaxSection';
 
 export default function Home() {
   return (
