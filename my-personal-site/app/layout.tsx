@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AnimatedBackground from "../components/AnimatedBackground";
-import { ParallaxProvider } from "react-scroll-parallax";
+import dynamic from "next/dynamic";
+
+const ParallaxProvider = dynamic(
+  () =>
+    import("react-scroll-parallax").then((m) => m.ParallaxProvider),
+  { ssr: false }
+);
+
+const AnimatedBackground = dynamic(
+  () => import("../components/AnimatedBackground"),
+  { ssr: false }
+);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
