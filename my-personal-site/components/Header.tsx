@@ -21,6 +21,7 @@ export default function Header() {
           <li><Link href="#hero" onClick={() => setOpen(false)}>Inicio</Link></li>
           <li><Link href="#about" onClick={() => setOpen(false)}>Sobre mí</Link></li>
           <li><Link href="#timeline" onClick={() => setOpen(false)}>Experiencia</Link></li>
+          <li><Link href="#education" onClick={() => setOpen(false)}>Educación</Link></li>
           <li><Link href="#skills" onClick={() => setOpen(false)}>Habilidades</Link></li>
           <li><Link href="#projects" onClick={() => setOpen(false)}>Proyectos</Link></li>
           <li><Link href="#contact" onClick={() => setOpen(false)}>Contacto</Link></li>
