@@ -50,21 +50,25 @@ export default function Timeline() {
   return (
     <section id="timeline" className="w-full bg-gray-100 dark:bg-gray-900 py-20">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-8">Experiencia</h2>
-        <ul className="space-y-6">
+        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Experiencia</h2>
+        <ul>
           {items.map((item) => (
             <motion.li
               key={item.title}
-              className="border-l-2 border-foreground pl-4"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="font-bold">{item.title}</h3>
-              <p className="italic">{item.subtitle}</p>
-              <p>{item.description}</p>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{item.date}</span>
+              <div className="relative pl-8 mb-8">
+                <span className="absolute left-0 top-3 w-3 h-3 bg-accent rounded-full" />
+                <div className="bg-secondary/20 dark:bg-gray-800/70 backdrop-blur-md p-4 rounded-lg border-l-4 border-accent">
+                  <h3 className="font-bold text-foreground">{item.title}</h3>
+                  <p className="italic text-foreground">{item.subtitle}</p>
+                  <p className="text-foreground">{item.description}</p>
+                  <span className="text-sm text-gray-700 dark:text-gray-200">{item.date}</span>
+                </div>
+              </div>
             </motion.li>
           ))}
         </ul>
