@@ -19,6 +19,12 @@ const projects: Project[] = [
     imageUrl: 'https://source.unsplash.com/random/800x600?sig=3',
     url: '#',
   },
+  {
+    title: 'Kuicco',
+    description: 'Plataforma de almacenamiento seguro desarrollada junto a Deddian Technology.',
+    imageUrl: 'https://source.unsplash.com/random/800x600?sig=4',
+    url: '#',
+  },
 ];
 
 export default projects;

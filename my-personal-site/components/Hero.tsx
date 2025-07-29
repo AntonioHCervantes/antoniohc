@@ -4,7 +4,11 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 export default function Hero() {
   const [text] = useTypewriter({
-    words: ['Desarrollador Web', 'Ingeniero de software', 'Apasionado por la tecnología'],
+    words: [
+      'Lidero equipos de desarrollo',
+      'Domino tecnologías web',
+      'Integro IA con GitHub Copilot',
+    ],
     loop: 0,
   });
   return (
@@ -15,7 +19,8 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h1 className="text-5xl md:text-6xl font-bold mb-4">Hola, soy Antonio</h1>
+      <h1 className="text-5xl md:text-6xl font-bold mb-4">Hola, soy Antonio Hernández Cervantes</h1>
+      <h2 className="text-2xl md:text-3xl mb-2">Líder Técnico y experto en integración de IA</h2>
       <p className="text-xl md:text-2xl mb-6">
         <span>{text}</span>
         <Cursor cursorStyle="|" />

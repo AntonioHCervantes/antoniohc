@@ -9,6 +9,9 @@ export default function Skills() {
     { name: 'React', level: 88 },
     { name: 'Next.js', level: 80 },
     { name: 'Tailwind CSS', level: 75 },
+    { name: 'Liderazgo y gestión de equipos', level: 90 },
+    { name: 'Integración de IA en proyectos', level: 85 },
+    { name: 'Estrategia con GitHub Copilot', level: 80 },
   ];
 
   return (
