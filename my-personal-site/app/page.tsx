@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Timeline from '../components/Timeline';
+import ExperienceTimeline from '../components/ExperienceTimeline';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
 import ProjectsSection from '../components/ProjectsSection';
@@ -17,7 +17,7 @@ export default function Home() {
         <About />
       </ParallaxSection>
       <ParallaxSection speed={-5}>
-        <Timeline />
+        <ExperienceTimeline />
       </ParallaxSection>
       <ParallaxSection speed={-7}>
         <Education />
