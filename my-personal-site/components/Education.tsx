@@ -21,7 +21,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="max-w-3xl mx-auto px-4 py-20">
+    <section id="education" className="max-w-3xl mx-auto px-6 text-center py-20">
       <h2 className="text-3xl font-semibold text-center mb-8">Educación</h2>
       <ul className="space-y-6">
         {studies.map((study) => (
