@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import Image from 'next/image';
 
 export default function Hero() {
   const [text] = useTypewriter({
@@ -20,6 +21,18 @@ export default function Hero() {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-lg mx-auto text-center space-y-6">
+        <div className="relative w-40 h-40 mx-auto mb-8">
+          {/* glow animado opcional */}
+          <span className="absolute inset-0 rounded-full bg-primary/20 blur-xl animate-pulse"></span>
+          <Image
+            src="/images/foto_antonio.jpeg"
+            alt="Antonio Hernández Cervantes"
+            fill
+            sizes="160px"
+            priority
+            className="rounded-full object-cover border-4 border-primary shadow-xl relative z-10"
+          />
+        </div>
         <h1 className="text-5xl md:text-6xl font-bold">Hola, soy Antonio Hernández Cervantes</h1>
         <h2 className="text-2xl md:text-3xl">Líder Técnico y experto en integración de IA</h2>
         <p className="text-xl md:text-2xl">
