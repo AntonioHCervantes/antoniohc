@@ -1,44 +1,26 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import { Switch } from '@headlessui/react';
+import { Sun, Moon } from 'lucide-react';
 
 export default function DarkModeToggle() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialDark = saved ? saved === 'dark' : prefersDark;
-    setDark(initialDark);
-    applyTheme(initialDark);
-  }, []);
-
-  const applyTheme = (isDark: boolean) => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.style.setProperty('--background', '#0a0a0a');
-      root.style.setProperty('--foreground', '#ededed');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.style.setProperty('--background', '#ffffff');
-      root.style.setProperty('--foreground', '#171717');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
-  const toggleTheme = () => {
-    const next = !dark;
-    setDark(next);
-    applyTheme(next);
-  };
+  const { theme, setTheme } = useTheme();
+  const enabled = theme === 'dark';
 
   return (
-    <button
-      aria-label="Toggle dark mode"
-      onClick={toggleTheme}
-      className="p-2 text-xl"
+    <Switch
+      checked={enabled}
+      onChange={(val) => setTheme(val ? 'dark' : 'light')}
+      className={`relative inline-flex h-6 w-11 items-center rounded-full ${enabled ? 'bg-primary' : 'bg-gray-300'}`}
     >
-      {dark ? '☀️' : '🌙'}
-    </button>
+      <span className="sr-only">Cambiar tema</span>
+      <span
+        className={`inline-block h-4 w-4 transform rounded-full bg-background transition-transform ${
+          enabled ? 'translate-x-6' : 'translate-x-1'
+        }`}
+      >
+        {enabled ? <Moon size={14} className="mx-auto mt-0.5" /> : <Sun size={14} className="mx-auto mt-0.5" />}
+      </span>
+    </Switch>
   );
 }
