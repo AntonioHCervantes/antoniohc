@@ -20,7 +20,7 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-lg mx-auto text-center space-y-6">
+      <div className="max-w-xl mx-auto text-center space-y-6">
         <div className="relative w-40 h-40 mx-auto mb-8">
           {/* glow animado opcional */}
           <span className="absolute inset-0 rounded-full bg-primary/20 blur-xl animate-pulse"></span>
@@ -34,7 +34,7 @@ export default function Hero() {
           />
         </div>
         <h1 className="text-5xl md:text-6xl font-bold">Hola, soy Antonio Hernández Cervantes</h1>
-        <h2 className="text-2xl md:text-3xl">Líder Técnico y experto en integración de IA</h2>
+        <h2 className="text-2xl md:text-3xl">Líder Técnico, experto en tecnologías Web</h2>
         <p className="text-xl md:text-2xl">
           <span>{text}</span>
           <Cursor cursorStyle="|" />
