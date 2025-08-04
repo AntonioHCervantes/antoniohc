@@ -2,27 +2,23 @@ import { Project } from './ProjectCard';
 
 const projects: Project[] = [
   {
-    title: 'Proyecto 1',
-    description: 'Una breve descripción del proyecto 1.',
-    imageUrl: 'https://source.unsplash.com/random/800x600?sig=1',
+    title: 'Proyecto Alpha',
+    description: 'Aplicación moderna para gestionar proyectos personales.',
+    imageUrl: '/images/project-alpha.svg',
     url: '#',
+    cta: 'Ver más',
   },
   {
-    title: 'Proyecto 2',
-    description: 'Una breve descripción del proyecto 2.',
-    imageUrl: 'https://source.unsplash.com/random/800x600?sig=2',
+    title: 'Proyecto Beta',
+    description: 'Dashboard interactivo con métricas en tiempo real.',
+    imageUrl: '/images/project-beta.svg',
     url: '#',
+    cta: 'Ver demo',
   },
   {
-    title: 'Proyecto 3',
-    description: 'Una breve descripción del proyecto 3.',
-    imageUrl: 'https://source.unsplash.com/random/800x600?sig=3',
-    url: '#',
-  },
-  {
-    title: 'Kuicco',
+    title: 'Proyecto Gamma',
     description: 'Plataforma de almacenamiento seguro desarrollada junto a Deddian Technology.',
-    imageUrl: 'https://source.unsplash.com/random/800x600?sig=4',
+    imageUrl: '/images/project-gamma.svg',
     url: '#',
   },
 ];
