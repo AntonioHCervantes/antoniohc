@@ -4,20 +4,31 @@ import CountUp from 'react-countup';
 
 export default function Skills() {
   const skills = [
-    { name: 'JavaScript', level: 90 },
-    { name: 'TypeScript', level: 85 },
-    { name: 'React', level: 88 },
-    { name: 'Next.js', level: 80 },
-    { name: 'Tailwind CSS', level: 75 },
-    { name: 'Liderazgo y gestión de equipos', level: 90 },
-    { name: 'Integración de IA en proyectos', level: 85 },
-    { name: 'Estrategia con GitHub Copilot', level: 80 },
+    { name: 'Liderazgo equipos Web', level: 95 },
+    { name: 'Monitorización de sistemas', level: 96 },
+    { name: 'Alertado de sistemas', level: 90 },
+    { name: 'Organización de tareas', level: 96 },
+    { name: 'Análisis de Incidencias', level: 98 },
+    { name: 'Planificación de Iniciativas Técnicas', level: 94 },
+    { name: 'Documentación técnica', level: 94 },
+    { name: 'Revisión de código', level: 97 },
+    { name: 'Integración de IA', level: 96 },
+    { name: 'Desarrollo Accesible', level: 93 },
+    { name: 'GitHub Copilot', level: 95 },
+    { name: 'JIRA', level: 96 },
+    { name: 'Confluence', level: 95 },
+    { name: 'Grafana', level: 96 },
+    { name: 'AlertHub', level: 93 },
+    { name: 'HTML / CSS', level: 98 },
+    { name: 'JavaScript / TypeScript', level: 96 },
+    { name: 'React / Next.js', level: 97 },
+    { name: 'Node.js', level: 96 },
   ];
 
   return (
-    <section id="skills" className="max-w-3xl mx-auto px-6 text-center py-20">
+    <section id="skills" className="max-w-3xl mx-auto px-6 py-20">
       <h2 className="text-3xl font-semibold text-center mb-8">Habilidades</h2>
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {skills.map((skill) => (
           <div key={skill.name}>
             <div className="flex justify-between mb-1">
