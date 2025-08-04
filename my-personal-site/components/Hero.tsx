@@ -25,7 +25,7 @@ export default function Hero() {
           {/* glow animado opcional */}
           <span className="absolute inset-0 rounded-full bg-primary/20 blur-xl animate-pulse"></span>
           <Image
-            src="/images/foto_antonio.jpeg"
+            src="images/foto_antonio.jpeg"
             alt="Antonio Hernández Cervantes"
             fill
             sizes="160px"
