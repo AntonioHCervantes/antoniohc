@@ -2,7 +2,7 @@
 
 ## Project scope
 
-- Monorepo containing the `my-personal-site` Next.js application.
+- Single Next.js application that lives at the repository root.
 - Target: high-quality personal portfolio with responsive Tailwind UI and light/dark theming.
 - Default package manager: npm (lockfile present). Do not replace it.
 
@@ -14,7 +14,7 @@
 - Build: `npm run build`
 - Preview production build: `npm run start`
 
-Run commands from the `my-personal-site` directory unless noted otherwise. Never submit work if lint or build fails.
+Run commands from the repository root unless noted otherwise. Never submit work if lint or build fails.
 
 ## Code style & design guidelines
 
