@@ -7,20 +7,23 @@ Personal portfolio built with [Next.js](https://nextjs.org), Tailwind CSS, and t
 Install dependencies and start the local development server:
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site. Most pages are server components; edit files inside `app/` or `components/` and the browser will automatically refresh.
 
 ## Available scripts
 
-| Command        | Description                    |
-| -------------- | ------------------------------ |
-| `npm run dev`  | Start the local dev server.    |
-| `npm run lint` | Run ESLint + Prettier checks.  |
-| `npm run build`| Create an optimized production build. |
-| `npm run start`| Serve the production build.    |
+| Command            | Description                                |
+| ------------------ | ------------------------------------------ |
+| `pnpm dev`         | Start the local dev server.                |
+| `pnpm lint`        | Run ESLint + Prettier checks.              |
+| `pnpm typecheck`   | Run TypeScript type checking.              |
+| `pnpm test`        | Execute the Jest test suite.               |
+| `pnpm format`      | Format the codebase with Prettier.         |
+| `pnpm build`       | Create an optimized production build.      |
+| `pnpm start`       | Serve the production build.                |
 
 ## Project structure
 
