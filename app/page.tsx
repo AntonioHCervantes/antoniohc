@@ -1,14 +1,14 @@
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import ExperienceTimeline from '../components/ExperienceTimeline';
-import Education from '../components/Education';
-import Skills from '../components/Skills';
-import ProjectsSection from '../components/ProjectsSection';
-import Contact from '../components/Contact';
-import ParallaxSection from '../components/ParallaxSection';
+import Header from '@/components/Header/Header';
+import Hero from '@/components/Hero/Hero';
+import About from '@/components/About/About';
+import ExperienceTimeline from '@/components/ExperienceTimeline/ExperienceTimeline';
+import Education from '@/components/Education/Education';
+import Skills from '@/components/Skills/Skills';
+import ProjectsSection from '@/components/ProjectsSection/ProjectsSection';
+import Contact from '@/components/Contact/Contact';
+import ParallaxSection from '@/components/ui/ParallaxSection/ParallaxSection';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="flex flex-col items-center px-0">
       <Header />
