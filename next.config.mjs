@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/antoniohc',
-  assetPrefix: '/antoniohc',
   images: {
     unoptimized: true,
     localPatterns: [
