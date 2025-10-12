@@ -4,15 +4,15 @@
 
 - Single Next.js application that lives at the repository root.
 - Target: high-quality personal portfolio with responsive Tailwind UI and light/dark theming.
-- Default package manager: npm (lockfile present). Do not replace it.
+- Default package manager: pnpm (lockfile present). Do not replace it.
 
 ## Build and quality commands
 
-- Install dependencies: `npm install`
-- Start dev server: `npm run dev`
-- Lint: `npm run lint` (must pass with no warnings)
-- Build: `npm run build`
-- Preview production build: `npm run start`
+- Install dependencies: `pnpm install`
+- Start dev server: `pnpm run dev`
+- Lint: `pnpm run lint` (must pass with no warnings)
+- Build: `pnpm run build`
+- Preview production build: `pnpm run start`
 
 Run commands from the repository root unless noted otherwise. Never submit work if lint or build fails.
 
@@ -38,8 +38,8 @@ Run commands from the repository root unless noted otherwise. Never submit work 
 
 ## Testing & validation
 
-- Prioritize linting (`npm run lint`) as the linter enforces both ESLint and Prettier rules.
-- Execute `npm run build` for any change that might affect compilation or routing.
+- Prioritize linting (`pnpm run lint`) as the linter enforces both ESLint and Prettier rules.
+- Execute `pnpm run build` for any change that might affect compilation or routing.
 - Add automated tests when introducing logic that can be unit-tested (e.g., data transformers, hooks).
 
 ## Security & performance
