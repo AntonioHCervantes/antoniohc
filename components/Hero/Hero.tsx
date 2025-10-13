@@ -31,14 +31,14 @@ export default function Hero() {
             className="relative z-10 rounded-full border-4 border-primary object-cover shadow-xl"
           />
         </div>
-        <h1 className="text-5xl font-bold md:text-6xl">Hola, soy Antonio Hernández Cervantes</h1>
+        <h1 className="text-5xl font-bold md:text-6xl">Antonio Hernández Cervantes</h1>
         <h2 className="text-2xl md:text-3xl">Líder Técnico, experto en tecnologías Web</h2>
         <p className="text-xl md:text-2xl">
           <span>{text}</span>
           <Cursor cursorStyle="|" />
         </p>
         <button
-          className="mx-auto rounded bg-foreground px-6 py-3 text-background transition hover:opacity-80"
+          className="mx-auto rounded bg-primary px-6 py-3 text-white transition hover:opacity-80"
           onClick={scrollToAbout}
         >
           Conóceme
