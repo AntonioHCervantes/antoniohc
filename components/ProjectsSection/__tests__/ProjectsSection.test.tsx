@@ -8,6 +8,10 @@ jest.mock('../useProjectsSection', () => ({
 describe('ProjectsSection Component', () => {
   it('should render without crashing', () => {
     render(<ProjectsSection />);
-    expect(screen.getByText('Proyectos')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: /Proyectos que combinan innovación, diseño y tecnología/i,
+      }),
+    ).toBeInTheDocument();
   });
 });
