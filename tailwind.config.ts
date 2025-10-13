@@ -12,7 +12,7 @@ export default {
       colors: {
         background: { DEFAULT: '#0b0f19', light: '#ffffff' },
         foreground: { DEFAULT: '#e2e8f0', light: '#111827' },
-        primary: '#ff9900',
+        primary: '#FF8C42',
       },
     },
   },

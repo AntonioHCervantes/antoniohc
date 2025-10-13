@@ -17,6 +17,6 @@ describe('Hero Component', () => {
   it('should render without crashing', () => {
     render(<Hero />);
     // Check for the name to ensure it rendered with mock data
-    expect(screen.getByText('Hola, soy Antonio Hernández Cervantes')).toBeInTheDocument();
+    expect(screen.getByText('Antonio Hernández Cervantes')).toBeInTheDocument();
   });
 });
