@@ -11,14 +11,14 @@ export default function ProjectsSection() {
   } = useProjectsSection();
 
   return (
-    <section id="projects" className="relative w-full py-32">
+    <section id="projects" className="relative w-full pt-32 pb-40 sm:pb-48">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6">
         <header className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-primary/80 dark:text-primary/70">Selección destacada</p>
+          <p className="text-xs uppercase tracking-[0.5em] text-primary/90 transition-colors dark:text-primary/80">Selección destacada</p>
           <h2 className="mt-6 text-4xl font-bold text-slate-900 transition-colors dark:text-white sm:text-5xl">
             Proyectos que combinan innovación, diseño y tecnología
           </h2>
-          <p className="mt-4 text-base text-slate-600 transition-colors dark:text-slate-200/80">
+          <p className="mt-4 text-base text-slate-600 transition-colors dark:text-slate-200/90">
             Una colección de experiencias digitales construidas con precisión, enfocadas en resultados medibles y una estética
             moderna.
           </p>
