@@ -1,10 +1,21 @@
 export function useAbout() {
   const state = {
     heading: 'Acerca de mí',
+    subheading: 'Ingeniero en informática y líder técnico orientado a resultados',
+    introduction:
+      'Combino formación en Ingeniería Informática y en Ingeniería Técnica de Sistemas con una sólida trayectoria dirigiendo equipos multidisciplinares y proyectos de software de alto impacto.',
     paragraphs: [
-      'Soy Ingeniero en Informática y en Ingeniería Técnica de Sistemas. A lo largo de mi trayectoria he evolucionado hacia el liderazgo técnico, coordinando equipos de desarrollo y dirigiendo grandes proyectos de software.',
-      'Domino tecnologías frontend como HTML/HTML5, CSS/Sass, JavaScript/ES6+, React/Redux y Node.js. Además, soy especialista en usabilidad, SEO y responsive design, integrando herramientas de IA como GitHub Copilot de forma coordinada y escalable.',
+      'Mi enfoque une estrategia, diseño e ingeniería para crear experiencias digitales consistentes, preparadas para escalar y mantener la calidad en cada iteración.',
     ],
+    highlights: [
+      { label: 'Rol\nPrincipal', value: 'Teach\nLead' },
+      { label: 'Foco\nProfesional', value: 'Aplicaciones\nWeb' },
+      { label: 'Valor\nDiferencial', value: 'Experto en\nIA' },
+    ],
+    portrait: {
+      src: '/images/foto_antonio.jpeg',
+      alt: 'Antonio Hernández Cervantes sonriendo con traje oscuro',
+    },
   } as const;
 
   return {
