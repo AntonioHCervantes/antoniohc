@@ -8,9 +8,9 @@ export function useAbout() {
       'Mi enfoque une estrategia, diseño e ingeniería para crear experiencias digitales consistentes, preparadas para escalar y mantener la calidad en cada iteración.',
     ],
     highlights: [
-      { label: 'Rol Principal', value: 'Teach Lead' },
+      { label: 'Rol\nPrincipal', value: 'Teach\nLead' },
       { label: 'Foco Profesional', value: 'Aplicaciones Web' },
-      { label: 'Valor Diferencial', value: 'Mentoría Técnica' },
+      { label: 'Ventaja Clave', value: 'Mentoría Experta' },
     ],
     portrait: {
       src: '/images/foto_antonio.jpeg',

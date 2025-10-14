@@ -35,12 +35,12 @@ export default function About() {
             {highlights.map(({ label, value }) => (
               <div
                 key={label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur"
+                className="rounded-2xl border border-zinc-200/70 bg-white/80 p-5 text-center shadow-sm transition-colors dark:border-white/10 dark:bg-white/5 dark:shadow-none"
               >
-                <dt className="text-xs font-medium uppercase tracking-[0.25em] text-foreground/60">
+                <dt className="whitespace-pre-line text-xs font-medium uppercase tracking-[0.25em] text-foreground/60">
                   {label}
                 </dt>
-                <dd className="mt-3 text-2xl font-semibold text-primary">{value}</dd>
+                <dd className="mt-3 whitespace-pre-line text-2xl font-semibold text-primary">{value}</dd>
               </div>
             ))}
           </dl>
