@@ -15,15 +15,15 @@ export default function ProjectCard({ project }: Props) {
     <div className="group relative flex h-full flex-col">
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/60 via-transparent to-[#1F8BC4]/50 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-[#1F8BC4]/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100 dark:from-primary/60 dark:to-[#1F8BC4]/40"
       />
-      <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-8 backdrop-blur-xl transition duration-500 group-hover:border-white/20 dark:border-white/5 dark:bg-slate-900/60">
+      <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/60 bg-white/80 p-8 shadow-[0_12px_40px_rgba(15,23,42,0.05)] backdrop-blur-xl transition duration-500 group-hover:border-primary/30 dark:border-white/10 dark:bg-slate-900/60 dark:shadow-[0_12px_40px_rgba(15,23,42,0.45)]">
         <div className="relative mb-8 flex items-center justify-center">
           <span
             aria-hidden
-            className="absolute -inset-x-8 -inset-y-6 rounded-[2rem] bg-gradient-to-br from-primary/40 to-[#1F8BC4]/30 opacity-60 blur-2xl"
+            className="absolute -inset-x-8 -inset-y-6 rounded-[2rem] bg-gradient-to-br from-primary/30 to-[#1F8BC4]/20 opacity-60 blur-2xl dark:from-primary/40 dark:to-[#1F8BC4]/30"
           />
-          <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/70 shadow-[0_0_25px_rgba(31,139,196,0.25)]">
+          <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl border border-slate-200/70 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_0_25px_rgba(31,139,196,0.25)]">
             <Image
               src={projectData.imageUrl}
               alt={projectData.title}
@@ -33,15 +33,15 @@ export default function ProjectCard({ project }: Props) {
             />
           </div>
         </div>
-        <div className="flex flex-grow flex-col text-slate-100">
-          <h3 className="text-2xl font-semibold tracking-tight text-white">{projectData.title}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-slate-200/80">{projectData.description}</p>
+        <div className="flex flex-grow flex-col text-slate-900 transition-colors dark:text-slate-100">
+          <h3 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">{projectData.title}</h3>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600 transition-colors dark:text-slate-200/80">{projectData.description}</p>
           {projectData.technologies?.length ? (
-            <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold tracking-wide text-slate-200/70">
+            <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold tracking-wide text-slate-500 transition-colors dark:text-slate-200/70">
               {projectData.technologies.map((technology) => (
                 <li
                   key={technology}
-                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 uppercase backdrop-blur"
+                  className="rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 uppercase text-slate-700 backdrop-blur transition-colors dark:border-white/10 dark:bg-white/10 dark:text-slate-200"
                 >
                   {technology}
                 </li>

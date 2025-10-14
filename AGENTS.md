@@ -29,6 +29,7 @@ Run commands from the repository root unless noted otherwise. Never submit work 
 - Maintain consistent Tailwind class ordering (run Prettier) and favor semantic HTML.
 - Keep TypeScript strictness; avoid `any` unless justified with an inline comment explaining the constraint.
 - Respect accessibility: proper aria-attributes, keyboard navigation, contrast-aware color choices.
+- UI updates must be validated in both light and dark modes and align with the established visual style direction.
 
 ## Documentation expectations
 
