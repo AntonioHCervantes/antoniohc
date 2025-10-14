@@ -9,8 +9,8 @@ export function useAbout() {
     ],
     highlights: [
       { label: 'Rol\nPrincipal', value: 'Teach\nLead' },
-      { label: 'Foco Profesional', value: 'Aplicaciones Web' },
-      { label: 'Ventaja Clave', value: 'Mentoría Experta' },
+      { label: 'Foco\nProfesional', value: 'Aplicaciones\nWeb' },
+      { label: 'Valor\nDiferencial', value: 'Experto en\nIA' },
     ],
     portrait: {
       src: '/images/foto_antonio.jpeg',

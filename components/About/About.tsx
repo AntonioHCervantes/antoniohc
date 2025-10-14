@@ -35,7 +35,7 @@ export default function About() {
             {highlights.map(({ label, value }) => (
               <div
                 key={label}
-                className="rounded-2xl border border-zinc-200/70 bg-white/80 p-5 text-center shadow-sm transition-colors dark:border-white/10 dark:bg-white/5 dark:shadow-none"
+                className="rounded-2xl border border-zinc-200/70 bg-white/80 p-5 text-center shadow-sm transition-colors backdrop-blur dark:border-white/10 dark:bg-zinc-900/60 dark:shadow-[0_0_0_1px_rgba(255,255,255,0.04)]"
               >
                 <dt className="whitespace-pre-line text-xs font-medium uppercase tracking-[0.25em] text-foreground/60">
                   {label}
