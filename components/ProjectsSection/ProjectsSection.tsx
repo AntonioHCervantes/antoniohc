@@ -11,27 +11,40 @@ export default function ProjectsSection() {
   } = useProjectsSection();
 
   return (
-    <section
-      id="projects"
-      className="w-full bg-white/90 py-32 text-gray-900 backdrop-blur-sm dark:bg-background/90 dark:text-gray-100"
-    >
-      <h2 className="mb-16 text-center text-3xl font-semibold">
-        <span className="after:mx-auto after:mt-3 after:block after:h-1 after:w-16 after:bg-primary">Proyectos</span>
-      </h2>
-      <div className="grid w-full grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-16">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1} className="transform transition-transform hover:scale-105">
-              <ProjectCard project={project} />
-            </Tilt>
-          </motion.div>
-        ))}
+    <section id="projects" className="relative w-full pt-32 pb-40 sm:pb-48">
+      <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6">
+        <header className="mx-auto max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-primary/90 transition-colors dark:text-primary/80">Selección destacada</p>
+          <h2 className="mt-6 text-4xl font-bold text-slate-900 transition-colors dark:text-white sm:text-5xl">
+            Proyectos que combinan innovación, diseño y tecnología
+          </h2>
+          <p className="mt-4 text-base text-slate-600 transition-colors dark:text-slate-200/90">
+            Una colección de experiencias digitales construidas con precisión, enfocadas en resultados medibles y una estética
+            moderna.
+          </p>
+        </header>
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+            >
+              <Tilt
+                tiltMaxAngleX={12}
+                tiltMaxAngleY={12}
+                scale={1.02}
+                glareEnable
+                glareMaxOpacity={0.15}
+                className="transform-gpu transition-transform duration-500 hover:scale-[1.02]"
+              >
+                <ProjectCard project={project} />
+              </Tilt>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
