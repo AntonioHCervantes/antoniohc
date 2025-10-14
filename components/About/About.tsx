@@ -9,16 +9,15 @@ export default function About() {
 
   return (
     <section id="about" className="px-6 py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 rounded-3xl border border-white/10 bg-slate-900/40 p-10 shadow-[0_25px_70px_rgba(15,23,42,0.35)] backdrop-blur-sm lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
-        <div className="relative mx-auto h-full w-full max-w-sm">
-          <div className="absolute -inset-6 rounded-[2.5rem] bg-primary/25 opacity-60 blur-3xl" aria-hidden />
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]">
+        <div className="mx-auto h-full w-full max-w-sm">
           <Image
             src={portrait.src}
             alt={portrait.alt}
             width={520}
             height={640}
             priority
-            className="relative z-10 h-auto w-full rounded-[2.25rem] object-cover shadow-2xl"
+            className="h-auto w-full rounded-[2.25rem] object-cover shadow-2xl"
           />
         </div>
         <div className="space-y-8 text-left text-foreground">
