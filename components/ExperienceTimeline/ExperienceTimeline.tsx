@@ -21,12 +21,10 @@ function ExperienceCard({ experience, side }: ExperienceCardProps) {
   const tiltClassName = clsx(
     'group relative block w-full rounded-3xl transition-transform duration-500',
     'md:w-auto md:max-w-[420px]',
-    side !== 'mobile' &&
-      'md:before:absolute md:before:top-1/2 md:before:h-[2px] md:before:w-20 md:before:-translate-y-1/2 md:before:rounded-full md:before:content-[""] md:after:absolute md:after:top-1/2 md:after:h-6 md:after:w-6 md:after:-translate-y-1/2 md:after:rounded-full md:after:border md:after:border-primary/40 md:after:bg-background md:after:shadow-[0_0_32px_rgba(255,140,66,0.45)] md:after:ring-4 md:after:ring-primary/10 md:after:content-[""]',
     side === 'left'
-      ? 'md:mr-auto md:pl-10 md:text-right md:before:right-[-4.5rem] md:before:bg-gradient-to-r md:before:from-transparent md:before:via-primary/60 md:before:to-primary md:after:right-[-4.5rem] md:after:translate-x-1/2'
+      ? 'md:mr-auto md:pl-10 md:text-right'
       : side === 'right'
-        ? 'md:ml-auto md:pr-10 md:text-left md:before:left-[-4.5rem] md:before:bg-gradient-to-l md:before:from-transparent md:before:via-primary/60 md:before:to-primary md:after:left-[-4.5rem] md:after:-translate-x-1/2'
+        ? 'md:ml-auto md:pr-10 md:text-left'
         : 'text-left'
   );
 
@@ -78,12 +76,7 @@ export default function ExperienceTimeline() {
   } = useExperienceTimeline();
 
   return (
-    <section
-      id="experience"
-      className="relative overflow-hidden bg-gradient-to-b from-background via-background/80 to-background py-24"
-    >
-      <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/10 blur-3xl md:left-24" />
-      <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-primary/5 blur-3xl md:right-24" />
+    <section id="experience" className="relative py-24">
       <div className="relative mx-auto max-w-6xl px-6 md:px-12">
         <h2 className="mb-20 text-center text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl">
           <span className="bg-gradient-to-r from-primary via-primary/70 to-primary/40 bg-clip-text text-transparent">
@@ -110,34 +103,48 @@ export default function ExperienceTimeline() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: index * 0.08, duration: 0.7, ease: 'easeOut' }}
               >
-                <div className="grid gap-10 md:grid-cols-[1fr_auto_1fr] md:items-center">
+                <div className="grid gap-y-10 md:grid-cols-[minmax(0,1fr)_140px_minmax(0,1fr)] md:items-center md:gap-x-0">
                   <div className="hidden md:flex md:justify-end">
                     {side === 'left' ? (
-                      <ExperienceCard experience={experience} side="left" />
+                      <div className="relative flex w-full max-w-[420px] justify-end">
+                        <ExperienceCard experience={experience} side="left" />
+                        <span className="pointer-events-none absolute right-[-70px] top-1/2 hidden h-[2px] w-[70px] -translate-y-1/2 bg-gradient-to-r from-primary/0 via-primary/50 to-primary md:block" />
+                      </div>
                     ) : (
-                      <div aria-hidden className="h-[1px] w-[420px]" />
+                      <div aria-hidden className="h-[1px]" />
                     )}
                   </div>
                   <div className="relative flex flex-col items-center gap-4">
                     {index !== 0 && (
                       <span className="hidden h-12 w-[3px] rounded-full bg-gradient-to-b from-transparent via-primary/20 to-primary/60 md:block" />
                     )}
-                    <motion.span
-                      className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary/70 bg-background shadow-[0_0_28px_rgba(255,140,66,0.45)]"
-                      animate={{ scale: [1, 1.12, 1] }}
-                      transition={{ duration: 2.4, repeat: Infinity, delay: index * 0.25 }}
-                    >
-                      <span className="h-3 w-3 rounded-full bg-primary" />
-                    </motion.span>
+                    <div className="flex w-full items-center justify-center">
+                      {side === 'left' && (
+                        <span className="hidden h-[2px] flex-1 rounded-full bg-gradient-to-r from-primary/0 via-primary/40 to-primary md:block" />
+                      )}
+                      <motion.span
+                        className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary/70 bg-background shadow-[0_0_28px_rgba(255,140,66,0.45)]"
+                        animate={{ scale: [1, 1.12, 1] }}
+                        transition={{ duration: 2.4, repeat: Infinity, delay: index * 0.25 }}
+                      >
+                        <span className="h-3 w-3 rounded-full bg-primary" />
+                      </motion.span>
+                      {side === 'right' && (
+                        <span className="hidden h-[2px] flex-1 rounded-full bg-gradient-to-l from-primary/0 via-primary/40 to-primary md:block" />
+                      )}
+                    </div>
                     {index !== experiences.length - 1 && (
                       <span className="hidden h-16 w-[3px] rounded-full bg-gradient-to-b from-primary/60 via-primary/20 to-transparent md:block" />
                     )}
                   </div>
                   <div className="hidden md:flex md:justify-start">
                     {side === 'right' ? (
-                      <ExperienceCard experience={experience} side="right" />
+                      <div className="relative flex w-full max-w-[420px] justify-start">
+                        <span className="pointer-events-none absolute left-[-70px] top-1/2 hidden h-[2px] w-[70px] -translate-y-1/2 bg-gradient-to-l from-primary/0 via-primary/50 to-primary md:block" />
+                        <ExperienceCard experience={experience} side="right" />
+                      </div>
                     ) : (
-                      <div aria-hidden className="h-[1px] w-[420px]" />
+                      <div aria-hidden className="h-[1px]" />
                     )}
                   </div>
                   <div className="md:hidden">
