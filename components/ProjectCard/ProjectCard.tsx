@@ -8,7 +8,16 @@ type Props = {
   variant?: 'featured' | 'standard';
 };
 
-const ACCENT_STYLES: Record<NonNullable<Project['accent']> | 'indigo', Record<string, string>> = {
+type AccentKey = NonNullable<Project['accent']> | 'indigo';
+
+type AccentTokens = {
+  glow: string;
+  focus: string;
+  chip: string;
+  button: string;
+};
+
+const ACCENT_STYLES: Record<AccentKey, AccentTokens> = {
   amber: {
     glow: 'from-amber-400/30 via-orange-400/20 to-primary/15',
     focus: 'bg-amber-100 text-amber-900 dark:bg-amber-500/20 dark:text-amber-50',
