@@ -10,7 +10,7 @@ describe('ProjectsSection Component', () => {
     render(<ProjectsSection />);
     expect(
       screen.getByRole('heading', {
-        name: /Proyectos diseñados para entornos exigentes/i,
+        name: /Proyectos que combinan innovación, diseño y tecnología./i,
       }),
     ).toBeInTheDocument();
   });

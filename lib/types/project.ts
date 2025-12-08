@@ -9,4 +9,5 @@ export type Project = {
   status?: string;
   result?: string;
   duration?: string;
+  accent?: 'amber' | 'violet' | 'cyan' | 'emerald' | 'indigo';
 };
