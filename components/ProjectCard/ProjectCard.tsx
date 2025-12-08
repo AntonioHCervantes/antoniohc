@@ -68,15 +68,15 @@ export default function ProjectCard({ project, variant = 'standard' }: Props) {
 
   const visual = (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-white/50 bg-gradient-to-br from-white/60 via-white/40 to-slate-50/70 p-4 shadow-[0_12px_45px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/60 backdrop-blur-lg dark:border-white/10 dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-900/80 dark:ring-white/5`}
+      className={`relative overflow-hidden rounded-2xl border border-slate-200/70 bg-white p-4 shadow-[0_10px_38px_rgba(15,23,42,0.08)] ring-1 ring-white/70 transition duration-300 dark:border-white/10 dark:bg-slate-900/80 dark:shadow-[0_22px_60px_rgba(0,0,0,0.45)] dark:ring-white/5`}
     >
       <span
         aria-hidden
-        className={`pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br ${accentStyles.glow} opacity-70 blur-2xl transition duration-700`}
+        className={`pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br ${accentStyles.glow} opacity-30 blur-2xl transition duration-700`}
       />
       <div className="relative flex items-center justify-center">
         <div className="relative h-full w-full">
-          <div className="absolute inset-3 rounded-xl bg-white/60 ring-1 ring-slate-200/70 drop-shadow-[0_20px_60px_rgba(15,23,42,0.08)] dark:bg-slate-800/70 dark:ring-white/10" />
+          <div className="absolute inset-3 rounded-xl bg-white/80 ring-1 ring-slate-200/70 shadow-[0_12px_30px_rgba(15,23,42,0.08)] dark:bg-slate-800/70 dark:ring-white/10" />
           <Image
             src={projectData.imageUrl}
             alt={projectData.title}
@@ -105,10 +105,9 @@ export default function ProjectCard({ project, variant = 'standard' }: Props) {
     <div className="group relative h-full">
       <span
         aria-hidden
-        className={`pointer-events-none absolute inset-0 rounded-[30px] bg-gradient-to-br ${accentStyles.glow} opacity-40 blur-3xl transition duration-700 group-hover:opacity-70`}
+        className={`pointer-events-none absolute inset-0 rounded-[30px] bg-gradient-to-br ${accentStyles.glow} opacity-20 blur-3xl transition duration-700 group-hover:opacity-45`}
       />
-      <div className="relative h-full overflow-hidden rounded-[30px] border border-slate-200/70 bg-gradient-to-b from-white/80 via-white/70 to-slate-50/70 p-8 shadow-[0_18px_70px_rgba(15,23,42,0.08)] backdrop-blur-2xl transition duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_26px_90px_rgba(15,23,42,0.12)] dark:border-white/10 dark:from-slate-900/80 dark:via-slate-900/75 dark:to-slate-950/85 dark:shadow-[0_26px_90px_rgba(0,0,0,0.45)]">
-        <div className="pointer-events-none absolute inset-px rounded-[28px] border border-white/40 bg-[radial-gradient(circle_at_15%_25%,rgba(124,191,250,0.22),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(161,132,255,0.16),transparent_32%)] opacity-80 dark:border-white/5" />
+      <div className="relative h-full overflow-hidden rounded-[30px] border border-slate-200/80 bg-white/95 p-8 shadow-[0_18px_70px_rgba(15,23,42,0.07)] transition duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_24px_80px_rgba(15,23,42,0.12)] dark:border-white/10 dark:bg-slate-900/85 dark:shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
         <div className={`relative h-full ${layoutClass}`}>
           <div className={variant === 'featured' ? 'lg:col-span-5 space-y-4' : 'space-y-4'}>
             <div className="flex items-center gap-3">

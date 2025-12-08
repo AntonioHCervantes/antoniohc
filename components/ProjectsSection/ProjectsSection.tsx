@@ -13,15 +13,10 @@ export default function ProjectsSection() {
   const otherProjects = projects.slice(1);
 
   return (
-    <section id="projects" className="relative w-full overflow-hidden py-28 sm:py-32">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-950/90 dark:to-slate-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_25%),radial-gradient(circle_at_80%_15%,rgba(168,85,247,0.12),transparent_24%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(14,165,233,0.06),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(99,102,241,0.07),transparent_32%)] dark:bg-[radial-gradient(circle_at_18%_30%,rgba(59,130,246,0.18),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(168,85,247,0.18),transparent_30%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_30%,rgba(255,255,255,0.35),transparent_30%)] dark:bg-[radial-gradient(circle_at_70%_10%,rgba(255,255,255,0.06),transparent_32%)]" />
-        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'linear-gradient(to right, rgba(148,163,184,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.12) 1px, transparent 1px)', backgroundSize: '72px 72px' }} />
-      </div>
-
+    <section
+      id="projects"
+      className="relative w-full bg-white/95 py-28 transition-colors duration-300 dark:bg-slate-950/95 sm:py-32"
+    >
       <div className="mx-auto flex max-w-6xl flex-col gap-14 px-6">
         <header className="relative max-w-4xl space-y-4">
           <div className="inline-flex items-center gap-3 rounded-full border border-slate-200/80 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-700 shadow-[0_12px_40px_rgba(15,23,42,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-white">
