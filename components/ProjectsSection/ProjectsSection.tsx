@@ -11,7 +11,10 @@ export default function ProjectsSection() {
   } = useProjectsSection();
 
   return (
-    <section id="projects" className="relative w-full overflow-hidden py-24 sm:py-32">
+    <section
+      id="projects"
+      className="relative w-full overflow-hidden py-28 sm:py-40 md:mt-16 md:mb-20"
+    >
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white/80 dark:from-background/60 dark:via-background/30 dark:to-background/60" />
         <div className="absolute left-1/2 top-[-18rem] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl dark:bg-primary/10" />
