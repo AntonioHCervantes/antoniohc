@@ -7,12 +7,20 @@ type Props = {
   children: ReactNode;
   speed?: number;
   className?: string;
+  wrapperClassName?: string;
 };
 
-export default function ParallaxSection({ children, speed = -10, className = '' }: Props) {
+export default function ParallaxSection({
+  children,
+  speed = -10,
+  className = '',
+  wrapperClassName = '',
+}: Props) {
   return (
-    <Parallax speed={speed} className={className}>
-      {children}
-    </Parallax>
+    <div className={`relative w-full ${wrapperClassName}`}>
+      <Parallax speed={speed} className={`block w-full ${className}`}>
+        {children}
+      </Parallax>
+    </div>
   );
 }
