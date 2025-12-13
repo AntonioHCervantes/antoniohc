@@ -3,6 +3,7 @@ import ProjectCard from '../ProjectCard';
 import { type Project } from '@/lib/types/project';
 
 const mockProject: Project = {
+  slug: 'test-project',
   title: 'Test Project',
   description: 'Test Description',
   imageUrl: '/',
