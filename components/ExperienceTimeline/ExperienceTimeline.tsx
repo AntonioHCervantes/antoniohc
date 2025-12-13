@@ -83,14 +83,14 @@ export default function ExperienceTimeline() {
             Experiencia
           </span>
         </h2>
-        <motion.span
-          className="pointer-events-none absolute left-1/2 top-44 hidden h-[calc(100%-11rem)] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-primary/40 to-transparent md:block"
-          initial={{ scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
-        />
         <div className="relative flex flex-col gap-20">
+          <motion.span
+            className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 origin-top bg-gradient-to-b from-transparent via-primary/40 to-transparent md:block"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
+          />
           {experiences.map((experience, index) => {
             const side: ExperienceCardProps['side'] = index % 2 === 0 ? 'left' : 'right';
 
@@ -114,28 +114,14 @@ export default function ExperienceTimeline() {
                       <div aria-hidden className="h-[1px]" />
                     )}
                   </div>
-                  <div className="relative flex flex-col items-center gap-4">
-                    {index !== 0 && (
-                      <span className="hidden h-12 w-[3px] rounded-full bg-gradient-to-b from-transparent via-primary/20 to-primary/60 md:block" />
-                    )}
-                    <div className="flex w-full items-center justify-center">
-                      {side === 'left' && (
-                        <span className="hidden h-[2px] flex-1 rounded-full bg-gradient-to-r from-primary/0 via-primary/40 to-primary md:block" />
-                      )}
-                      <motion.span
-                        className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary/70 bg-background shadow-[0_0_28px_rgba(255,140,66,0.45)]"
-                        animate={{ scale: [1, 1.12, 1] }}
-                        transition={{ duration: 2.4, repeat: Infinity, delay: index * 0.25 }}
-                      >
-                        <span className="h-3 w-3 rounded-full bg-primary" />
-                      </motion.span>
-                      {side === 'right' && (
-                        <span className="hidden h-[2px] flex-1 rounded-full bg-gradient-to-l from-primary/0 via-primary/40 to-primary md:block" />
-                      )}
-                    </div>
-                    {index !== experiences.length - 1 && (
-                      <span className="hidden h-16 w-[3px] rounded-full bg-gradient-to-b from-primary/60 via-primary/20 to-transparent md:block" />
-                    )}
+                  <div className="relative flex items-center justify-center">
+                    <motion.span
+                      className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary/70 bg-background shadow-[0_0_28px_rgba(255,140,66,0.45)]"
+                      animate={{ scale: [1, 1.12, 1] }}
+                      transition={{ duration: 2.4, repeat: Infinity, delay: index * 0.25 }}
+                    >
+                      <span className="h-3 w-3 rounded-full bg-primary" />
+                    </motion.span>
                   </div>
                   <div className="hidden md:flex md:justify-start">
                     {side === 'right' ? (
