@@ -15,15 +15,15 @@ export default function ProjectCard({ project }: Props) {
     <div className="group relative flex h-full flex-col">
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-[#1F8BC4]/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100 dark:from-primary/50 dark:via-transparent dark:to-[#1F8BC4]/35"
+        className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/25 via-transparent to-[#1F8BC4]/20 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100 dark:from-primary/40 dark:via-transparent dark:to-[#1F8BC4]/30"
       />
-      <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/60 bg-white/85 p-8 shadow-[0_12px_40px_rgba(15,23,42,0.05)] backdrop-blur-xl transition duration-500 group-hover:border-primary/30 dark:border-white/10 dark:bg-slate-950/80 dark:shadow-[0_18px_55px_rgba(8,17,35,0.75)]">
+      <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-[0_18px_70px_-45px_rgba(15,23,42,0.25)] backdrop-blur-xl transition duration-500 before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:bg-gradient-to-r before:from-primary/0 before:via-primary/70 before:to-[#1F8BC4]/0 before:opacity-70 before:content-[''] group-hover:-translate-y-1 group-hover:border-primary/30 group-hover:shadow-[0_30px_90px_-55px_rgba(15,23,42,0.35)] dark:border-white/10 dark:bg-slate-950/70 dark:shadow-[0_28px_90px_-55px_rgba(0,0,0,0.85)] dark:group-hover:border-primary/40 dark:group-hover:shadow-[0_40px_130px_-70px_rgba(0,0,0,0.9)]">
         <div className="relative mb-8 flex items-center justify-center">
           <span
             aria-hidden
-            className="absolute -inset-x-8 -inset-y-6 rounded-[2rem] bg-gradient-to-br from-primary/30 to-[#1F8BC4]/20 opacity-60 blur-2xl dark:from-primary/35 dark:to-[#1F8BC4]/25"
+            className="absolute -inset-x-8 -inset-y-6 rounded-[2rem] bg-gradient-to-br from-primary/25 via-transparent to-[#1F8BC4]/15 opacity-70 blur-2xl transition duration-500 group-hover:opacity-100 dark:from-primary/30 dark:to-[#1F8BC4]/20"
           />
-          <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl border border-slate-200/70 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.08)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_0_35px_rgba(31,139,196,0.35)]">
+          <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl border border-slate-200/70 bg-white/95 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.25)] backdrop-blur dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_0_45px_-10px_rgba(31,139,196,0.35)]">
             <Image
               src={projectData.imageUrl}
               alt={projectData.title}
@@ -35,13 +35,15 @@ export default function ProjectCard({ project }: Props) {
         </div>
         <div className="flex flex-grow flex-col text-slate-900 transition-colors dark:text-slate-100">
           <h3 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">{projectData.title}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600 transition-colors dark:text-slate-200/90">{projectData.description}</p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600 transition-colors dark:text-slate-200/90">
+            {projectData.description}
+          </p>
           {projectData.technologies?.length ? (
             <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold tracking-wide text-slate-500 transition-colors dark:text-slate-200">
               {projectData.technologies.map((technology) => (
                 <li
                   key={technology}
-                  className="rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 uppercase text-slate-700 backdrop-blur transition-colors dark:border-white/5 dark:bg-slate-800/80 dark:text-slate-100"
+                  className="rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 uppercase text-slate-700 backdrop-blur transition-colors dark:border-white/10 dark:bg-white/5 dark:text-slate-100"
                 >
                   {technology}
                 </li>
