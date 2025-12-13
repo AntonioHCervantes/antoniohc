@@ -25,7 +25,7 @@ export default function HomePage() {
       <ParallaxSection speed={-10}>
         <Skills />
       </ParallaxSection>
-      <ParallaxSection speed={-15}>
+      <ParallaxSection speed={0}>
         <ProjectsSection />
       </ParallaxSection>
       <ParallaxSection speed={-20}>

@@ -11,7 +11,7 @@ type Props = {
 
 export default function ParallaxSection({ children, speed = -10, className = '' }: Props) {
   return (
-    <Parallax speed={speed} className={className}>
+    <Parallax speed={speed} className={`block w-full ${className}`}>
       {children}
     </Parallax>
   );
