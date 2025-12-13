@@ -55,10 +55,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       <div className="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-16 md:px-12">
         <header className="space-y-6">
           <Link
-            href="/"
+            href="/#projects"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-[#166a95] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
-            <span aria-hidden>←</span> Volver al portfolio
+            <span aria-hidden>←</span> Volver a proyectos
           </Link>
 
           <div className="flex flex-col gap-6 rounded-3xl border border-white/60 bg-white/80 p-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.3)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-[0_30px_120px_-75px_rgba(0,0,0,0.9)]">
@@ -127,6 +127,64 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
             ))}
           </div>
         </div>
+
+        <section className="rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-[0_28px_100px_-70px_rgba(15,23,42,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-[0_40px_130px_-90px_rgba(0,0,0,1)]">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-primary">
+                Explora más
+              </p>
+              <h2 className="mt-3 text-2xl font-black text-slate-900 dark:text-white">Otros proyectos destacados</h2>
+              <p className="mt-2 text-base text-slate-700 dark:text-slate-200/90">
+                Continúa explorando el resto de mi trabajo con accesos directos a otros casos de estudio.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projectDetails
+              .filter(({ slug: otherSlug }) => otherSlug !== project.slug)
+              .slice(0, 3)
+              .map((otherProject) => (
+                <Link
+                  key={otherProject.slug}
+                  href={`/projects/${otherProject.slug}`}
+                  className="group relative flex h-full flex-col rounded-2xl border border-slate-200/70 bg-white/70 p-6 shadow-[0_22px_80px_-65px_rgba(15,23,42,0.38)] transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_26px_95px_-70px_rgba(31,139,196,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-white/10 dark:bg-white/5 dark:shadow-[0_32px_110px_-85px_rgba(0,0,0,0.95)]"
+                >
+                  <div className="absolute inset-x-6 top-0 h-1 rounded-b-full bg-gradient-to-r from-primary/0 via-primary/70 to-[#1F8BC4]/0 opacity-0 transition duration-300 group-hover:opacity-100" />
+                  <div className="flex flex-1 flex-col gap-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{otherProject.title}</h3>
+                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2">
+                        Ver detalle
+                        <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">
+                          →
+                        </span>
+                      </span>
+                    </div>
+                    <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200/90">{otherProject.summary}</p>
+                    {otherProject.technologies?.length ? (
+                      <div className="flex flex-wrap gap-2">
+                        {otherProject.technologies.slice(0, 3).map((tech) => (
+                          <span
+                            key={tech}
+                            className="rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 backdrop-blur dark:border-white/10 dark:bg-white/10 dark:text-slate-100"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {otherProject.technologies.length > 3 ? (
+                          <span className="rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                            +{otherProject.technologies.length - 3}
+                          </span>
+                        ) : null}
+                      </div>
+                    ) : null}
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </section>
       </div>
     </main>
   );
