@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import type { Project } from '@/lib/types/project';
 import { useProjectCard } from './useProjectCard';
@@ -10,6 +11,8 @@ export default function ProjectCard({ project }: Props) {
   const {
     state: { project: projectData },
   } = useProjectCard(project);
+
+  const isExternalLink = projectData.url?.startsWith('http');
 
   return (
     <div className="group relative flex h-full flex-col">
@@ -51,13 +54,25 @@ export default function ProjectCard({ project }: Props) {
             </ul>
           ) : null}
           {projectData.url ? (
-            <a
-              href={projectData.url}
-              className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#1F8BC4] px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(31,139,196,0.35)] transition duration-300 hover:shadow-[0_0_35px_rgba(31,139,196,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F8BC4]"
-            >
-              {projectData.cta ?? 'Ver proyecto'}
-              <span aria-hidden className="text-base">↗</span>
-            </a>
+            isExternalLink ? (
+              <a
+                href={projectData.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#1F8BC4] px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(31,139,196,0.35)] transition duration-300 hover:shadow-[0_0_35px_rgba(31,139,196,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F8BC4]"
+              >
+                {projectData.cta ?? 'Ver proyecto'}
+                <span aria-hidden className="text-base">↗</span>
+              </a>
+            ) : (
+              <Link
+                href={projectData.url}
+                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#1F8BC4] px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(31,139,196,0.35)] transition duration-300 hover:shadow-[0_0_35px_rgba(31,139,196,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F8BC4]"
+              >
+                {projectData.cta ?? 'Ver proyecto'}
+                <span aria-hidden className="text-base">↗</span>
+              </Link>
+            )
           ) : null}
         </div>
       </div>
