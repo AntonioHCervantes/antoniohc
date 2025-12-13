@@ -13,22 +13,22 @@ export default function HomePage() {
     <main className="flex flex-col items-center px-0">
       <Header />
       <Hero />
-      <ParallaxSection>
+      <ParallaxSection wrapperClassName="py-16 sm:py-24">
         <About />
       </ParallaxSection>
-      <ParallaxSection speed={-5}>
+      <ParallaxSection speed={-5} wrapperClassName="py-16 sm:py-24">
         <ExperienceTimeline />
       </ParallaxSection>
-      <ParallaxSection speed={-7}>
+      <ParallaxSection speed={-7} wrapperClassName="py-16 sm:py-24">
         <Education />
       </ParallaxSection>
-      <ParallaxSection speed={-10}>
+      <ParallaxSection speed={-10} wrapperClassName="py-16 sm:py-24">
         <Skills />
       </ParallaxSection>
-      <ParallaxSection speed={-15}>
+      <ParallaxSection speed={-8} wrapperClassName="py-20 sm:py-28">
         <ProjectsSection />
       </ParallaxSection>
-      <ParallaxSection speed={-20}>
+      <ParallaxSection speed={-8} wrapperClassName="py-16 sm:py-24">
         <Contact />
       </ParallaxSection>
     </main>
