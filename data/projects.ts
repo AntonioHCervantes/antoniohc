@@ -13,8 +13,8 @@ export const projectDetails: ProjectDetail[] = [
       alt: 'Ilustración abstracta para CheckPlanner, un tablero con columnas y tareas en progreso',
     },
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'dnd-kit', 'PWA'],
-    url: 'https://www.checkplanner.com',
-    cta: 'Abrir CheckPlanner',
+    liveUrl: 'https://www.checkplanner.com',
+    liveCta: 'Abrir CheckPlanner',
     content: [
       {
         title: 'Motivación y objetivo',
