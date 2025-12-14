@@ -50,44 +50,48 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: 'keep-calm-keep-working',
     title: 'Keep Calm Keep Working',
-    description: 'Dashboard interactivo con métricas en tiempo real.',
-    summary: 'Panel de control responsive para visualizar KPIs en vivo, optimizado para equipos de producto y negocio.',
+    description:
+      'Marca de bienestar para home office con un pack premium de pelotas antiestrés pensado para quienes trabajan frente al ordenador.',
+    summary:
+      'Creé la marca Keep Calm Keep Working para lanzar un pack de pelotas antiestrés diseñado para profesionales que trabajan desde casa. Gestioné todo el ciclo: fabricación en China, importación a España y venta en Amazon hasta agotar existencias.',
     imageUrl: '/images/project-beta.svg',
     heroImage: {
       src: '/images/project-beta.svg',
-      alt: 'Dashboard de métricas del Proyecto Beta',
+      alt: 'Mockup del pack Keep Calm Keep Working de pelotas antiestrés premium',
     },
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['Branding', 'E-commerce', 'Amazon', 'Supply chain', 'WordPress'],
+    liveUrl: 'https://keepcalmkeepworking.com/es/pack-pelotas-antiestres-premium/',
+    liveCta: 'Ver producto',
     cta: 'Ver más',
     content: [
       {
-        title: 'Contexto de negocio',
-        body: 'El cliente necesitaba una vista única con métricas en tiempo real que se adaptara a equipos remotos. Se priorizaron la fiabilidad de los datos y la rapidez de acceso.',
+        title: 'Origen y objetivo',
+        body: 'Quería un accesorio que ayudara a mantener la calma durante largas jornadas frente al ordenador, así que diseñé un pack premium de pelotas antiestrés para home office y regalos corporativos.',
       },
       {
-        title: 'Arquitectura de visualización',
-        body: 'Diseñamos un sistema modular de widgets con estados de carga accesibles y opciones de personalización rápida. El uso de TypeScript garantizó contratos claros entre el frontend y la API.',
+        title: 'Producción e importación',
+        body: 'Localicé una fábrica en China, definí calidades y packaging y coordiné la logística internacional hasta España, gestionando trámites aduaneros y control de calidad.',
       },
       {
-        title: 'Entrega y governance',
-        body: 'Documentamos componentes y tokens de diseño en Storybook para facilitar la adopción. Los equipos podían clonar configuraciones y compartir paneles con un clic.',
+        title: 'Lanzamiento y ventas',
+        body: 'Construí la landing, publiqué el producto en Amazon con fotos y copies optimizados y vendí todo el lote inicial. Aprendí a fondo sobre comercio internacional y marketplaces.',
       },
     ],
     results: [
       {
-        label: 'Decisiones',
-        value: '12x',
-        description: 'Mayor velocidad en la creación de reportes semanales comparado con el flujo previo.',
+        label: 'Ventas',
+        value: 'Stock agotado',
+        description: 'El primer lote se vendió por completo en Amazon tras el lanzamiento del producto.',
       },
       {
-        label: 'Disponibilidad',
-        value: '99.2%',
-        description: 'Estabilidad del dashboard durante picos de tráfico en lanzamientos.',
+        label: 'Cadena de valor',
+        value: 'Fabricación a entrega',
+        description: 'Negociación con fábrica china, producción supervisada, importación y distribución en España.',
       },
       {
-        label: 'Satisfacción',
-        value: '4.7/5',
-        description: 'Evaluación promedio en las encuestas internas de los squads de producto.',
+        label: 'Aprendizaje',
+        value: 'Ecommerce integral',
+        description: 'Experiencia end-to-end: branding, landing, optimización de listings y gestión logística internacional.',
       },
     ],
   },
