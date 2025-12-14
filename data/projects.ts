@@ -186,44 +186,48 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: 'kuicco',
     title: 'Kuicco',
-    description: 'Plataforma de almacenamiento seguro desarrollada junto a Deddian Technology.',
-    summary: 'Una plataforma cloud con énfasis en seguridad, auditoría y experiencia de autoservicio para equipos técnicos.',
+    description:
+      'Álbum digital privado para guardar fotos, vídeos y anécdotas de la infancia y compartirlos con la familia.',
+    summary:
+      'En 2016 lancé Kuicco con un grupo de amigos: una app web y móvil para crear álbumes de vida de los peques, mantenerlos organizados de forma automática y compartirlos solo con quien elijas.',
     imageUrl: '/images/project-gamma.svg',
     heroImage: {
       src: '/images/project-gamma.svg',
-      alt: 'Ilustración de infraestructura segura del Proyecto Gamma',
+      alt: 'Ilustración de álbum digital privado para familias',
     },
-    technologies: ['Next.js', 'Node.js', 'PostgreSQL'],
+    technologies: ['PHP', 'jQuery', 'Bootstrap', 'MySQL'],
+    liveUrl: 'https://www.kuicco.com',
+    liveCta: 'Visitar kuicco.com',
     cta: 'Ver más',
     content: [
       {
-        title: 'Seguridad como pilar',
-        body: 'Implementamos controles de acceso granulares, bitácoras auditables y cifrado de datos en tránsito y reposo. El diseño comunica confianza mediante paletas sobrias y mensajes claros.',
+        title: 'Recuerdos privados de la infancia',
+        body: 'Kuicco permite crear un álbum de vida para cada hijo, con fotos, vídeos y anécdotas organizadas por fecha y etapa. Fue la forma que encontramos para guardar los momentos especiales y compartirlos de manera íntima con la familia.',
       },
       {
-        title: 'Experiencia de autoservicio',
-        body: 'Los usuarios pueden aprovisionar espacios seguros en minutos gracias a asistentes guiados. Se añadieron checklists y validaciones en tiempo real para evitar configuraciones erróneas.',
+        title: 'Organización automática y recordatorios',
+        body: 'La app envía recordatorios mensuales para capturar su sonrisa y mantiene todo ordenado por edades, álbumes y tipo de contenido. También ofrecía impresión de recuerdos en álbumes y regalos directamente desde el móvil.',
       },
       {
-        title: 'Monitoreo continuo',
-        body: 'Se integraron paneles de salud del sistema y alertas proactivas que informan de anomalías antes de impactar a los clientes finales.',
+        title: 'Compartir con control total',
+        body: 'Las invitaciones a familiares incluían permisos configurables para mantener la privacidad. Como responsable del desarrollo web, implementé la interfaz con un framework de PHP y jQuery para sincronizar álbumes entre web y apps iOS/Android.',
       },
     ],
     results: [
       {
-        label: 'Despliegues',
-        value: '-35%',
-        description: 'Reducción en tiempos de puesta en marcha de nuevos entornos.',
+        label: 'Familias',
+        value: '+1.000',
+        description: 'Más de 1.000 familias llegaron a usar Kuicco para guardar y compartir recuerdos.',
       },
       {
-        label: 'Incidentes',
-        value: '-28%',
-        description: 'Disminución de incidentes críticos tras la implementación de alertas preventivas.',
+        label: 'Plataformas',
+        value: 'Web, iOS y Android',
+        description: 'Álbumes sincronizados y accesibles tanto desde la web como desde las apps móviles.',
       },
       {
-        label: 'Retención',
-        value: '+18%',
-        description: 'Aumento de retención al ofrecer mayor transparencia y controles de seguridad.',
+        label: 'Modelo',
+        value: 'Freemium',
+        description: 'Prueba inicial de 30 días y plan premium con almacenamiento ampliado e invitaciones ilimitadas.',
       },
     ],
   },
