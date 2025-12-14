@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="relative mx-auto mb-8 h-40 w-40">
           <span className="absolute inset-0 animate-pulse rounded-full bg-primary/20 blur-xl" />
           <Image
-            src="/images/foto_antonio.jpeg"
+            src="/images/foto_antonio.jpg"
             alt="Antonio Hernández Cervantes"
             fill
             sizes="160px"

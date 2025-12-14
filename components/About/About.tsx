@@ -4,7 +4,7 @@ import { useAbout } from './useAbout';
 
 export default function About() {
   const {
-    state: { heading, subheading, introduction, paragraphs, highlights, portrait },
+    state: { heading, subheading, introduction, highlights, portrait },
   } = useAbout();
 
   return (
@@ -26,11 +26,6 @@ export default function About() {
             <p className="text-xl font-semibold text-primary md:text-2xl">{subheading}</p>
             <p className="text-lg leading-relaxed text-foreground/80">{introduction}</p>
           </header>
-          <div className="space-y-4 text-base leading-relaxed text-foreground/90">
-            {paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
           <dl className="grid gap-6 pt-4 sm:grid-cols-3">
             {highlights.map(({ label, value }) => (
               <div

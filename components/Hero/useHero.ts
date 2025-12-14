@@ -6,9 +6,10 @@ import { useSmoothScrollToId } from '@/lib/hooks/useSmoothScrollToId';
 export function useHero() {
   const [text] = useTypewriter({
     words: [
+      '+16 años de experiencia',
       'Lidero equipos de desarrollo',
       'Domino tecnologías web',
-      'Integro IA con GitHub Copilot',
+      'Experto en IA aplicada',
     ],
     loop: 0,
   });
