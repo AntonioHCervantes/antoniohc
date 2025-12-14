@@ -6,9 +6,13 @@ import { useDarkModeToggle } from './useDarkModeToggle';
 
 export default function DarkModeToggle() {
   const {
-    state: { enabled },
+    state: { enabled, mounted },
     actions: { toggle },
   } = useDarkModeToggle();
+
+  if (!mounted) {
+    return <span aria-hidden className="inline-block h-6 w-11 rounded-full bg-transparent" />;
+  }
 
   return (
     <Switch

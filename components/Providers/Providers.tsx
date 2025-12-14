@@ -11,7 +11,7 @@ type Props = {
 
 export default function Providers({ children }: Props) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} enableColorScheme={false}>
       <ParallaxProvider>
         <AnimatedBackground />
         {children}
