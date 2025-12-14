@@ -25,6 +25,8 @@ export type ProjectDetail = Project & {
     alt: string;
   };
   summary: string;
+  liveUrl?: string;
+  liveCta?: string;
   content: ProjectDetailSection[];
   results: ProjectResult[];
 };

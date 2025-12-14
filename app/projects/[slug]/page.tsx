@@ -83,6 +83,19 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 ))}
               </div>
             ) : null}
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#1F8BC4] px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(31,139,196,0.35)] transition duration-300 hover:shadow-[0_0_35px_rgba(31,139,196,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F8BC4]"
+              >
+                {project.liveCta ?? 'Ver proyecto'}
+                <span aria-hidden className="text-base">
+                  ↗
+                </span>
+              </a>
+            ) : null}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {project.results.map((result) => (
                 <div
