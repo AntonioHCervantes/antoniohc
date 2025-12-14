@@ -20,7 +20,7 @@ const SOCIAL_LINKS = [
   },
 ] as const;
 
-const SUBTITLE = 'Conecta conmigo en mis redes sociales y conversemos sobre nuevos proyectos.';
+const SUBTITLE = 'Puedes contactar conmigo a través de las siguientes plataformas:';
 
 export function useContact() {
   return {
