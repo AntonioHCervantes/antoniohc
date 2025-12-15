@@ -98,44 +98,58 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: 'gift-ideas-finder',
     title: 'Gift Ideas Finder',
-    description: 'Dashboard interactivo con métricas en tiempo real.',
-    summary: 'Panel de control responsive para visualizar KPIs en vivo, optimizado para equipos de producto y negocio.',
-    imageUrl: '/images/project-beta.svg',
+    description:
+      'GPT dentro de ChatGPT que actúa como personal shopper: pide datos del destinatario, gustos y presupuesto para recomendar regalos en Amazon.',
+    summary:
+      'Asistente conversacional conectado a la API de Productos de Amazon que guía al usuario por mercado, perfil del destinatario y presupuesto para devolver sugerencias reales con enlaces listos para comprar.',
+    imageUrl: '/images/project-alpha.svg',
     heroImage: {
-      src: '/images/project-beta.svg',
-      alt: 'Dashboard de métricas del Proyecto Beta',
+      src: '/images/project-alpha.svg',
+      alt: 'Ilustración de un asistente de regalos mostrando ideas de Amazon en tarjetas de producto',
     },
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    technologies: [
+      'GPTs',
+      'OpenAI Actions',
+      'Amazon Product Advertising API',
+      'TypeScript',
+      'Next.js',
+    ],
+    liveUrl:
+      'https://chatgpt.com/g/g-6797129ba91c819186e71417942cb9d2-gift-ideas-finder-birthday-gifts',
+    liveCta: 'Probar en ChatGPT',
     cta: 'Ver más',
     content: [
       {
-        title: 'Contexto de negocio',
-        body: 'El cliente necesitaba una vista única con métricas en tiempo real que se adaptara a equipos remotos. Se priorizaron la fiabilidad de los datos y la rapidez de acceso.',
+        title: 'Rol y objetivo',
+        body:
+          'Creé un GPT propio dentro de ChatGPT para actuar como personal shopper de regalos. El objetivo: reducir la fricción de buscar ideas y entregar opciones comprables sin salir del chat.',
       },
       {
-        title: 'Arquitectura de visualización',
-        body: 'Diseñamos un sistema modular de widgets con estados de carga accesibles y opciones de personalización rápida. El uso de TypeScript garantizó contratos claros entre el frontend y la API.',
+        title: 'Flujo conversacional guiado',
+        body:
+          'El asistente pregunta primero en qué marketplace de Amazon comprar (ES, US, UK, DE, FR, IT, MX), luego quién recibe el regalo, sus gustos, ocasión y rango de presupuesto. Con esa información devuelve una lista breve de recomendaciones con descripciones claras y enlaces reales.',
       },
       {
-        title: 'Entrega y governance',
-        body: 'Documentamos componentes y tokens de diseño en Storybook para facilitar la adopción. Los equipos podían clonar configuraciones y compartir paneles con un clic.',
+        title: 'Integración técnica',
+        body:
+          'Conecté el GPT a la API de Productos de Amazon mediante una Action con autenticación propia para cada mercado. El sistema mapea respuestas a consultas parametrizadas (categoría, precio, valoraciones) y controla moneda y disponibilidad antes de mostrar el enlace acortado al usuario.',
       },
     ],
     results: [
       {
-        label: 'Decisiones',
-        value: '12x',
-        description: 'Mayor velocidad en la creación de reportes semanales comparado con el flujo previo.',
+        label: 'Mercados',
+        value: '7 Amazon locales',
+        description: 'Compatible con ES, US, UK, DE, FR, IT y MX para devolver precios y disponibilidad correctos.',
       },
       {
-        label: 'Disponibilidad',
-        value: '99.2%',
-        description: 'Estabilidad del dashboard durante picos de tráfico en lanzamientos.',
+        label: 'Recomendaciones',
+        value: 'Top 5-7',
+        description: 'Entrega una lista corta de ideas filtradas por gustos y presupuesto en menos de 10 segundos.',
       },
       {
-        label: 'Satisfacción',
-        value: '4.7/5',
-        description: 'Evaluación promedio en las encuestas internas de los squads de producto.',
+        label: 'Enlaces',
+        value: '100% comprobados',
+        description: 'Cada sugerencia llega con URL final a Amazon y aviso de moneda para evitar sorpresas en la compra.',
       },
     ],
   },
