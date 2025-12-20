@@ -248,44 +248,51 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: 'board-game-finder',
     title: 'Board Game Finder',
-    description: 'Plataforma de almacenamiento seguro desarrollada junto a Deddian Technology.',
-    summary: 'Una plataforma cloud con énfasis en seguridad, auditoría y experiencia de autoservicio para equipos técnicos.',
+    description:
+      'Buscador y recomendador de juegos de mesa que aprende de tus gustos para sugerir títulos relevantes en segundos.',
+    summary:
+      'Recomendador colaborativo que cruza tus preferencias con las valoraciones de BoardGameGeek para devolver partidas a tu medida. Lideré el front-end para crear una experiencia limpia y responsiva en la búsqueda y descubrimiento.',
     imageUrl: '/images/project-gamma.svg',
     heroImage: {
       src: '/images/project-gamma.svg',
-      alt: 'Ilustración de infraestructura segura del Proyecto Gamma',
+      alt: 'Interfaz de Board Game Finder mostrando juegos de mesa recomendados',
     },
-    technologies: ['Next.js', 'Node.js', 'PostgreSQL'],
+    technologies: ['CodeIgniter', 'MySQL', 'JavaScript', 'jQuery', 'Bootstrap', 'Machine Learning'],
+    liveUrl: 'https://www.boardgamefinder.net/',
+    liveCta: 'Probar Board Game Finder',
     cta: 'Ver más',
     content: [
       {
-        title: 'Seguridad como pilar',
-        body: 'Implementamos controles de acceso granulares, bitácoras auditables y cifrado de datos en tránsito y reposo. El diseño comunica confianza mediante paletas sobrias y mensajes claros.',
+        title: 'Rol y objetivo',
+        body:
+          'Junto a un grupo de amigos construimos un recomendador capaz de acotar miles de títulos a unas pocas sugerencias afinadas. Me encargué del front-end completo: maqueté la búsqueda guiada, los listados y las transiciones para que el usuario percibiera velocidad y claridad desde el primer clic.',
       },
       {
-        title: 'Experiencia de autoservicio',
-        body: 'Los usuarios pueden aprovisionar espacios seguros en minutos gracias a asistentes guiados. Se añadieron checklists y validaciones en tiempo real para evitar configuraciones erróneas.',
+        title: 'Cómo funciona',
+        body:
+          'El motor aplica filtrado colaborativo con factorizar matrices y embeddings de familia exponencial para predecir las valoraciones que un usuario daría a cada juego. Usa el histórico de ratings de BoardGameGeek y devuelve recomendaciones en función de similitud entre perfiles.',
       },
       {
-        title: 'Monitoreo continuo',
-        body: 'Se integraron paneles de salud del sistema y alertas proactivas que informan de anomalías antes de impactar a los clientes finales.',
+        title: 'Stack y experiencia visual',
+        body:
+          'El backend en CodeIgniter expone el ranking y los filtros; en el front integré JavaScript y jQuery para autocompletados, filtros dinámicos y paginación sin recargar. Diseñé la capa visual con Bootstrap y utilidades CSS para mantener la interfaz accesible y rápida en escritorio y móvil.',
       },
     ],
     results: [
       {
-        label: 'Despliegues',
-        value: '-35%',
-        description: 'Reducción en tiempos de puesta en marcha de nuevos entornos.',
+        label: 'Catálogo',
+        value: '70k+ juegos',
+        description: 'El sistema consume el dataset de BoardGameGeek para cubrir mecánicas, categorías y ediciones.',
       },
       {
-        label: 'Incidentes',
-        value: '-28%',
-        description: 'Disminución de incidentes críticos tras la implementación de alertas preventivas.',
+        label: 'Experiencia',
+        value: 'Recomendaciones en 3 pasos',
+        description: 'Búsqueda inicial, afinado por gustos y entrega de sugerencias listas para explorar sin fricciones.',
       },
       {
-        label: 'Retención',
-        value: '+18%',
-        description: 'Aumento de retención al ofrecer mayor transparencia y controles de seguridad.',
+        label: 'Contribución',
+        value: 'Front-end lead',
+        description: 'Arquitecté y desarrollé la interfaz responsiva y la integración con el motor de recomendaciones.',
       },
     ],
   }
