@@ -116,7 +116,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-[0_28px_100px_-70px_rgba(15,23,42,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-[0_40px_130px_-90px_rgba(0,0,0,1)]">
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-[#1F8BC4]/0 opacity-60" />
-            <figure className="relative overflow-hidden rounded-2xl border border-slate-200/60 bg-gradient-to-br from-white to-slate-50 p-6 dark:border-white/10 dark:from-white/5 dark:to-white/5">
+            <figure className="relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white p-6 dark:border-white/10 dark:bg-white">
               <Image
                 src={project.heroImage.src}
                 alt={project.heroImage.alt}

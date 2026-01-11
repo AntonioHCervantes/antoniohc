@@ -4,12 +4,13 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: 'check-planner',
     title: 'CheckPlanner',
-    description: 'PWA privada para planificar tu día y tus proyectos sin registros ni dependencias de la nube.',
+    description:
+      'Aplicación web de productividad personal para planificar el día y gestionar tareas sin cuentas ni servicios externos.',
     summary:
-      'Planificador diario y tablero Kanban en un solo lugar, con guardado local, modo offline, exportación de datos y experiencia installable.',
-    imageUrl: '/images/project-alpha.svg',
+      'PWA open source pensada para organizar el trabajo diario desde el navegador: planificación por día y backlog, etiquetas y prioridades, guardado local sin registro, exportación/importación y uso offline.',
+    imageUrl: '/images/checkplanner.png',
     heroImage: {
-      src: '/images/project-alpha.svg',
+      src: '/images/checkplanner.png',
       alt: 'Ilustración abstracta para CheckPlanner, un tablero con columnas y tareas en progreso',
     },
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'dnd-kit', 'PWA'],
@@ -17,33 +18,33 @@ export const projectDetails: ProjectDetail[] = [
     liveCta: 'Abrir CheckPlanner',
     content: [
       {
-        title: 'Motivación y objetivo',
-        body: 'Desarrollé CheckPlanner para cubrir mi necesidad de organizar el día sin depender de cuentas ni servidores. El foco es la productividad personal: decidir el trabajo importante, moverlo visualmente y volver a él aunque no haya conexión.',
+        title: 'Visión del producto',
+        body: 'CheckPlanner nace como una herramienta personal, rápida y sin fricción para organizar el trabajo diario. Eliminé cuentas y servidores para que cargue al instante y funcione de forma privada en tu propio dispositivo.',
       },
       {
-        title: 'Experiencia centrada en la productividad',
-        body: 'Incluye dos vistas complementarias: My Day (To Do, In Progress, Done) para priorizar la jornada y My Tasks (Ideas, Backlog, In Progress, Done) para visualizar proyectos completos. Ambas soportan drag & drop accesible y persistencia inmediata.',
+        title: 'Planificación diaria con foco',
+        body: 'La vista My Day permite escoger qué tareas abordar hoy y moverlas con acciones rápidas. My Tasks funciona como tablero completo (Ideas, Backlog, In Progress, Done) para mantener el contexto de tus proyectos. Cada tarea admite etiquetas y prioridad, con atajos de teclado para cambiar el estado sin frenar el ritmo.',
       },
       {
-        title: 'Privacidad y entrega técnica',
-        body: 'Todo se guarda en localStorage a través de una store de Zustand, con exportación/importación en JSON y sin envío de datos a servidores. Next.js + TypeScript y Tailwind soportan un PWA instalable que funciona offline y se actualiza con service workers.',
+        title: 'Privacidad, portabilidad y personalización',
+        body: 'Toda la información se almacena localmente en el navegador y no se comparte con terceros. Incluye exportación e importación en JSON para copias de seguridad o mover tu planificación a otro dispositivo, controles de tema e idioma y soporte PWA instalable para trabajar también sin conexión.',
       },
     ],
     results: [
       {
+        label: 'Modelo',
+        value: '100% gratuito',
+        description: 'Open source, sin límites de uso y disponible para revisar o ampliar cuando quieras.',
+      },
+      {
         label: 'Privacidad',
-        value: 'Datos locales',
-        description: 'Sin cuentas ni backend: toda la información vive en localStorage y se puede exportar en JSON.',
+        value: '100% local',
+        description: 'Sin registros ni telemetría; los datos se guardan en el navegador con exportación e importación.',
       },
       {
-        label: 'Modo offline',
-        value: 'PWA',
-        description: 'Installable y lista para usarse sin conexión gracias a la caché del service worker.',
-      },
-      {
-        label: 'Flujos',
+        label: 'Flujo diario',
         value: 'My Day + Kanban',
-        description: 'Dos tableros pensados para priorizar tareas diarias y organizar proyectos con drag & drop.',
+        description: 'Planificación con etiquetas, prioridades y atajos de teclado para mover tareas con rapidez.',
       },
     ],
   },
@@ -51,12 +52,12 @@ export const projectDetails: ProjectDetail[] = [
     slug: 'keep-calm-keep-working',
     title: 'Keep Calm Keep Working',
     description:
-      'Marca de bienestar para home office con un pack premium de pelotas antiestrés pensado para quienes trabajan frente al ordenador.',
+      'Cree esta marca para diseñar y dar forma a ideas de productos interesantes para home office que fueran útiles para personas que trabajan con ordenador desde casa.',
     summary:
-      'Creé la marca Keep Calm Keep Working para lanzar un pack de pelotas antiestrés diseñado para profesionales que trabajan desde casa. Gestioné todo el ciclo: fabricación en China, importación a España y venta en Amazon hasta agotar existencias.',
-    imageUrl: '/images/project-beta.svg',
+      'Sin duda esta es una de mis aventuras más locas. Me propuse crear un producto desde cero y ponerlo a la venta en Amazon. Creé la marca Keep Calm Keep Working para lanzar un pack de pelotas antiestrés diseñado para profesionales que trabajan desde casa. Gestioné todo el ciclo: diseño del producto, auditoría legal de certificados necesarios para su venta, fabricación en China, certificación en laboratorio, importación a España, gestión y almacenado de stock y venta en Amazon hasta agotar existencias.',
+    imageUrl: '/images/keep-calm-keep-working.png',
     heroImage: {
-      src: '/images/project-beta.svg',
+      src: '/images/keep-calm-keep-working.png',
       alt: 'Mockup del pack Keep Calm Keep Working de pelotas antiestrés premium',
     },
     technologies: ['Branding', 'E-commerce', 'Amazon', 'Supply chain', 'WordPress'],
@@ -66,11 +67,11 @@ export const projectDetails: ProjectDetail[] = [
     content: [
       {
         title: 'Origen y objetivo',
-        body: 'Quería un accesorio que ayudara a mantener la calma durante largas jornadas frente al ordenador, así que diseñé un pack premium de pelotas antiestrés para home office y regalos corporativos.',
+        body: 'El objetivo principal era aprender todo el ciclo del comercio internacional en primera persona. Además quería crear un accesorio que ayudara a mantener la calma durante largas jornadas frente al ordenador, así que diseñé un pack premium de pelotas antiestrés para home office y regalos corporativos.',
       },
       {
         title: 'Producción e importación',
-        body: 'Localicé una fábrica en China, definí calidades y packaging y coordiné la logística internacional hasta España, gestionando trámites aduaneros y control de calidad.',
+        body: 'Localicé una fábrica en China, definí calidades y packaging y coordiné la logística internacional hasta España, gestionando control de calidad, trámites aduaneros y un millón de cosas que aprendí por el camino.',
       },
       {
         title: 'Lanzamiento y ventas',
@@ -81,12 +82,12 @@ export const projectDetails: ProjectDetail[] = [
       {
         label: 'Ventas',
         value: 'Stock agotado',
-        description: 'El primer lote se vendió por completo en Amazon tras el lanzamiento del producto.',
+        description: 'El primer lote se vendió por completo en Amazon tras el lanzamiento del producto. El producto fue bien acogido, aunque fue dificil posicionarlo en las palabras de búsqueda claves debido a la competencia, tuve que gestionar todo el proceso de publicidad en la plataforma para posicionarlo.',
       },
       {
         label: 'Cadena de valor',
         value: 'Fabricación a entrega',
-        description: 'Negociación con fábrica china, producción supervisada, importación y distribución en España.',
+        description: 'Negociación con fábrica china, control de calidad, certificado en laboratorio, producción supervisada, importación en Barco y distribución en España. Una auténtica aventura con mil problemas por el camino que tuve que ir resolviendo.',
       },
       {
         label: 'Aprendizaje',
@@ -102,9 +103,9 @@ export const projectDetails: ProjectDetail[] = [
       'GPT dentro de ChatGPT que actúa como personal shopper: pide datos del destinatario, gustos y presupuesto para recomendar regalos en Amazon.',
     summary:
       'Asistente conversacional conectado a la API de Productos de Amazon que guía al usuario por mercado, perfil del destinatario y presupuesto para devolver sugerencias reales con enlaces listos para comprar.',
-    imageUrl: '/images/project-alpha.svg',
+    imageUrl: '/images/gift-ideas-finder.png',
     heroImage: {
-      src: '/images/project-alpha.svg',
+      src: '/images/gift-ideas-finder.png',
       alt: 'Ilustración de un asistente de regalos mostrando ideas de Amazon en tarjetas de producto',
     },
     technologies: [
