@@ -157,44 +157,46 @@ export const projectDetails: ProjectDetail[] = [
   {
     slug: 'smieals',
     title: 'Smieals',
-    description: 'Plataforma de almacenamiento seguro desarrollada junto a Deddian Technology.',
-    summary: 'Una plataforma cloud con énfasis en seguridad, auditoría y experiencia de autoservicio para equipos técnicos.',
-    imageUrl: '/images/project-gamma.svg',
+    description:
+      'App para planificar menús semanales, organizar recetas y generar la lista de la compra automáticamente.',
+    summary:
+      'Diseñé Smieals como un planificador de comidas inteligente que conecta menú semanal, recetas personalizadas y lista de la compra en un solo flujo familiar. Permite crear recetas propias, usar recetas premium o compartidas y calcular ingredientes con actualización en tiempo real.',
+    imageUrl: '/images/smieals.svg',
     heroImage: {
-      src: '/images/project-gamma.svg',
-      alt: 'Ilustración de infraestructura segura del Proyecto Gamma',
+      src: '/images/smieals.svg',
+      alt: 'Ilustración de una app de planificación de comidas con menú semanal y lista de la compra',
     },
-    technologies: ['Next.js', 'Node.js', 'PostgreSQL'],
+    technologies: ['Next.js', 'React', 'MUI', 'Firebase', 'PWA'],
     cta: 'Ver más',
     content: [
       {
-        title: 'Seguridad como pilar',
-        body: 'Implementamos controles de acceso granulares, bitácoras auditables y cifrado de datos en tránsito y reposo. El diseño comunica confianza mediante paletas sobrias y mensajes claros.',
+        title: 'Planificación semanal automática',
+        body: 'Smieals organiza el menú por semanas, con categorías como desayuno, comida y cena. La interfaz muestra semana anterior, actual y siguiente para ajustar la planificación sin perder contexto.',
       },
       {
-        title: 'Experiencia de autoservicio',
-        body: 'Los usuarios pueden aprovisionar espacios seguros en minutos gracias a asistentes guiados. Se añadieron checklists y validaciones en tiempo real para evitar configuraciones erróneas.',
+        title: 'Recetas conectadas a tu familia',
+        body: 'Puedes crear tus propias recetas o reutilizar colecciones premium y compartidas entre familias. El sistema mantiene un espacio común donde cada miembro accede al menú, recetas y preferencias.',
       },
       {
-        title: 'Monitoreo continuo',
-        body: 'Se integraron paneles de salud del sistema y alertas proactivas que informan de anomalías antes de impactar a los clientes finales.',
+        title: 'Lista de la compra inteligente',
+        body: 'La lista se calcula automáticamente a partir del menú semanal y añade elementos personalizados. Cada ítem puede marcarse como comprado o listo, facilitando el control desde el móvil en la compra.',
       },
     ],
     results: [
       {
-        label: 'Despliegues',
-        value: '-35%',
-        description: 'Reducción en tiempos de puesta en marcha de nuevos entornos.',
+        label: 'Menú semanal',
+        value: '3 semanas visibles',
+        description: 'Vista de semana anterior, actual y siguiente para planificar sin fricciones.',
       },
       {
-        label: 'Incidentes',
-        value: '-28%',
-        description: 'Disminución de incidentes críticos tras la implementación de alertas preventivas.',
+        label: 'Recetas',
+        value: 'Premium + propias',
+        description: 'Recetas curadas, familiares, compartidas y generadas con IA en un solo catálogo.',
       },
       {
-        label: 'Retención',
-        value: '+18%',
-        description: 'Aumento de retención al ofrecer mayor transparencia y controles de seguridad.',
+        label: 'Compra',
+        value: 'Lista automática',
+        description: 'Ingredientes calculados desde el menú, con items personalizados y estado de compra.',
       },
     ],
   },
