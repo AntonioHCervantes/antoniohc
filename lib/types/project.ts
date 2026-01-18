@@ -3,6 +3,8 @@ export type Project = {
   title: string;
   description: string;
   imageUrl: string;
+  /** Optional hex color used as the logo container background (e.g. "#3a7366"). */
+  logoBackgroundColor?: string;
   url?: string;
   cta?: string;
   technologies?: string[];

@@ -5,46 +5,54 @@ export const projectDetails: ProjectDetail[] = [
     slug: 'check-planner',
     title: 'CheckPlanner',
     description:
-      'Aplicación web de productividad personal para planificar el día y gestionar tareas sin cuentas ni servicios externos.',
+      'Planificador personal gratuito y open source para organizar tareas, priorizar el día y trabajar en local sin registro.',
     summary:
-      'PWA open source pensada para organizar el trabajo diario desde el navegador: planificación por día y backlog, etiquetas y prioridades, guardado local sin registro, exportación/importación y uso offline.',
+      'Planificador personal rápido y sin fricción, gratis y open source: sin registro y con datos en local. Organiza tu backlog en "Mis tareas" y planifica el día en "Mi día", con etiquetas, prioridades, tarea principal, timer de foco y avisos de jornada. Incluye exportación/importación y PWA instalable para trabajar offline.',
     imageUrl: '/images/checkplanner.png',
     heroImage: {
       src: '/images/checkplanner.png',
-      alt: 'Ilustración abstracta para CheckPlanner, un tablero con columnas y tareas en progreso',
+      alt: 'CheckPlanner, organiza tus tareas y mejora tu productividad',
     },
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'dnd-kit', 'PWA'],
     liveUrl: 'https://checkplanner.com',
     liveCta: 'Abrir CheckPlanner',
     content: [
       {
-        title: 'Visión del producto',
-        body: 'CheckPlanner nace como una herramienta personal, rápida y sin fricción para organizar el trabajo diario. Eliminé cuentas y servidores para que cargue al instante y funcione de forma privada en tu propio dispositivo.',
+        title: 'Qué es CheckPlanner',
+        body: 'Planificador personal rápido y sin fricción para ganar claridad. Es gratis, open source y no requiere registro; todo se guarda en tu dispositivo y puedes empezar en segundos con plantillas demo.',
       },
       {
-        title: 'Planificación diaria con foco',
-        body: 'La vista My Day permite escoger qué tareas abordar hoy y moverlas con acciones rápidas. My Tasks funciona como tablero completo (Ideas, Backlog, In Progress, Done) para mantener el contexto de tus proyectos. Cada tarea admite etiquetas y prioridad, con atajos de teclado para cambiar el estado sin frenar el ritmo.',
+        title: 'Dos vistas para planificar',
+        body: '"Mis tareas" concentra el backlog de ideas y tareas futuras; "Mi día" es el tablero para decidir qué harás hoy y en qué orden, moviendo tareas al día con un clic.',
       },
       {
-        title: 'Privacidad, portabilidad y personalización',
-        body: 'Toda la información se almacena localmente en el navegador y no se comparte con terceros. Incluye exportación e importación en JSON para copias de seguridad o mover tu planificación a otro dispositivo, controles de tema e idioma y soporte PWA instalable para trabajar también sin conexión.',
+        title: 'Foco y hábitos productivos',
+        body: 'Etiqueta y prioriza (baja, media, alta), reordena por drag o teclado y marca tu tarea principal. Cuando algo está En progreso, activa un timer de foco y configura avisos de jornada, como el recordatorio 30 minutos antes de terminar.',
+      },
+      {
+        title: 'Privacidad, portabilidad y offline',
+        body: 'Local-first sin servidores: exporta e importa tus datos para backups o cambio de dispositivo. Además puedes instalar la PWA y trabajar offline para reducir distracciones.',
+      },
+      {
+        title: 'Integración con VS Code + Copilot',
+        body: 'Si trabajas en desarrollo, puedes activar la integración con VS Code: al poner una tarea En progreso aparece "Abrir en VS Code", que abre VS Code y lanza un chat con GitHub Copilot con el prompt listo.',
       },
     ],
     results: [
       {
         label: 'Modelo',
-        value: '100% gratuito',
-        description: 'Open source, sin límites de uso y disponible para revisar o ampliar cuando quieras.',
+        value: 'Gratis + open source',
+        description: 'Sin registro; datos en local para empezar rápido y sin cuentas.',
       },
       {
-        label: 'Privacidad',
-        value: '100% local',
-        description: 'Sin registros ni telemetría; los datos se guardan en el navegador con exportación e importación.',
+        label: 'Plan diario',
+        value: 'Mis tareas + Mi día',
+        description: 'Backlog claro y selección diaria con etiquetas, prioridades y tarea principal.',
       },
       {
-        label: 'Flujo diario',
-        value: 'My Day + Kanban',
-        description: 'Planificación con etiquetas, prioridades y atajos de teclado para mover tareas con rapidez.',
+        label: 'Foco',
+        value: 'Timer + avisos',
+        description: 'Bloques de concentración al poner una tarea En progreso y recordatorio antes de terminar la jornada.',
       },
     ],
   },
@@ -207,9 +215,10 @@ export const projectDetails: ProjectDetail[] = [
       'Álbum digital privado para guardar fotos, vídeos y anécdotas de la infancia y compartirlos con la familia.',
     summary:
       'En 2016 lancé Kuicco con un grupo de amigos: una app web y móvil para crear álbumes de vida de los peques, mantenerlos organizados de forma automática y compartirlos solo con quien elijas.',
-    imageUrl: '/images/project-gamma.svg',
+    imageUrl: '/images/kuicco.svg',
+    logoBackgroundColor: '#3a7366',
     heroImage: {
-      src: '/images/project-gamma.svg',
+      src: '/images/kuicco.svg',
       alt: 'Ilustración de álbum digital privado para familias',
     },
     technologies: ['PHP', 'jQuery', 'Bootstrap', 'MySQL'],
@@ -255,9 +264,9 @@ export const projectDetails: ProjectDetail[] = [
       'Buscador y recomendador de juegos de mesa que aprende de tus gustos para sugerir títulos relevantes en segundos.',
     summary:
       'Recomendador colaborativo que cruza tus preferencias con las valoraciones de BoardGameGeek para devolver partidas a tu medida. Lideré el front-end para crear una experiencia limpia y responsiva en la búsqueda y descubrimiento.',
-    imageUrl: '/images/project-gamma.svg',
+    imageUrl: '/images/board-game-finder.ico',
     heroImage: {
-      src: '/images/project-gamma.svg',
+      src: '/images/board-game-finder.ico',
       alt: 'Interfaz de Board Game Finder mostrando juegos de mesa recomendados',
     },
     technologies: ['CodeIgniter', 'MySQL', 'JavaScript', 'jQuery', 'Bootstrap', 'Machine Learning'],
@@ -278,7 +287,7 @@ export const projectDetails: ProjectDetail[] = [
       {
         title: 'Stack y experiencia visual',
         body:
-          'El backend en CodeIgniter expone el ranking y los filtros; en el front integré JavaScript y jQuery para autocompletados, filtros dinámicos y paginación sin recargar. Diseñé la capa visual con Bootstrap y utilidades CSS para mantener la interfaz accesible y rápida en escritorio y móvil.',
+          'Desarrolle la capa frontend con CodeIgniter consumiendo el API que proveía la información necesaria para las recomendaciones. Utilicé JavaScript y jQuery para autocompletados, filtros dinámicos y paginación sin recargar. Diseñé la capa visual con Bootstrap y utilidades CSS para mantener la interfaz accesible y rápida en escritorio y móvil.',
       },
     ],
     results: [
@@ -295,18 +304,19 @@ export const projectDetails: ProjectDetail[] = [
       {
         label: 'Contribución',
         value: 'Front-end lead',
-        description: 'Arquitecté y desarrollé la interfaz responsiva y la integración con el motor de recomendaciones.',
+        description: 'Fuí el responsable del desarrollo frontend y realizar la integración con el motor de recomendaciones.',
       },
     ],
   }
 ];
 
 export const projects: Project[] = projectDetails.map(
-  ({ slug, title, description, imageUrl, technologies, url, cta }) => ({
+  ({ slug, title, description, imageUrl, logoBackgroundColor, technologies, url, cta }) => ({
     slug,
     title,
     description,
     imageUrl,
+    logoBackgroundColor,
     technologies,
     url: url ?? `/projects/${slug}`,
     cta: cta ?? 'Ver más',
