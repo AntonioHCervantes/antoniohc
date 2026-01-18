@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { useAbout } from './useAbout';
 
 export default function About() {
   const {
-    state: { heading, subheading, introduction, highlights, portrait },
+    state: { heading, subheading, introduction, biographyCta, highlights, portrait },
   } = useAbout();
 
   return (
@@ -25,6 +26,15 @@ export default function About() {
             <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">{heading}</h2>
             <p className="text-xl font-semibold text-primary md:text-2xl">{subheading}</p>
             <p className="text-lg leading-relaxed text-foreground/80">{introduction}</p>
+            <Link
+              href={biographyCta.href}
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#1F8BC4] px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(31,139,196,0.35)] transition duration-300 hover:shadow-[0_0_35px_rgba(31,139,196,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F8BC4]"
+            >
+              {biographyCta.label}
+              <span aria-hidden className="text-base">
+                →
+              </span>
+            </Link>
           </header>
           <dl className="grid gap-6 pt-4 sm:grid-cols-3">
             {highlights.map(({ label, value }) => (
