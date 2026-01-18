@@ -5,6 +5,10 @@ export function useAbout() {
     subheading: 'Experto en desarrollo de software y liderazgo de proyectos digitales',
     introduction:
       'Ingeniero Informático con una sólida trayectoria dirigiendo equipos multidisciplinares y proyectos de software de alto impacto.',
+    biographyCta: {
+      label: 'Ver biografía completa',
+      href: '/biografia',
+    },
     highlights: [
       { label: 'Rol\nPrincipal', value: 'Teach\nLead' },
       { label: 'Foco\nProfesional', value: 'Aplicaciones\nWeb' },

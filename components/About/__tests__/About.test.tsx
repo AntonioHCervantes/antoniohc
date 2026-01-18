@@ -8,6 +8,10 @@ jest.mock('../useAbout', () => ({
       heading: 'Test Heading',
       subheading: 'Test Subheading',
       introduction: 'Test introduction.',
+      biographyCta: {
+        label: 'Ver biografía completa',
+        href: '/biografia',
+      },
       highlights: [
         { label: 'Highlight A', value: 'Value A' },
         { label: 'Highlight B', value: 'Value B' },
@@ -26,6 +30,7 @@ describe('About Component', () => {
     expect(screen.getByText('Test Heading')).toBeInTheDocument();
     expect(screen.getByText('Test Subheading')).toBeInTheDocument();
     expect(screen.getByText('Test introduction.')).toBeInTheDocument();
+    expect(screen.getByText('Ver biografía completa')).toBeInTheDocument();
 
     // Check for the highlights
     expect(screen.getByText('Value A')).toBeInTheDocument();
