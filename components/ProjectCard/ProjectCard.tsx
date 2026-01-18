@@ -13,6 +13,9 @@ export default function ProjectCard({ project }: Props) {
   } = useProjectCard(project);
 
   const isExternalLink = projectData.url?.startsWith('http');
+  const logoBackgroundStyle = projectData.logoBackgroundColor
+    ? { backgroundColor: projectData.logoBackgroundColor }
+    : undefined;
 
   return (
     <div className="group relative flex h-full flex-col">
@@ -26,7 +29,10 @@ export default function ProjectCard({ project }: Props) {
             aria-hidden
             className="absolute -inset-x-8 -inset-y-6 rounded-[2rem] bg-gradient-to-br from-primary/25 via-transparent to-[#1F8BC4]/15 opacity-70 blur-2xl transition duration-500 group-hover:opacity-100 dark:from-primary/30 dark:to-[#1F8BC4]/20"
           />
-          <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border border-slate-200/70 bg-white shadow-[0_18px_45px_-30px_rgba(15,23,42,0.25)] backdrop-blur dark:border-white/10 dark:bg-white dark:shadow-[0_0_45px_-10px_rgba(31,139,196,0.35)]">
+          <div
+            className="relative flex h-28 w-28 items-center justify-center rounded-2xl border border-slate-200/70 bg-white shadow-[0_18px_45px_-30px_rgba(15,23,42,0.25)] backdrop-blur dark:border-white/10 dark:bg-white dark:shadow-[0_0_45px_-10px_rgba(31,139,196,0.35)]"
+            style={logoBackgroundStyle}
+          >
             <Image
               src={projectData.imageUrl}
               alt={projectData.title}

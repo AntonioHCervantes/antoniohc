@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getProjectDetail, projectDetails } from '@/data/projects';
+import ProjectCard from '@/components/ProjectCard/ProjectCard';
+import { getProjectDetail, projectDetails, projects } from '@/data/projects';
 
 const gradientBackground =
   'absolute inset-0 -z-10 overflow-hidden bg-gradient-to-b from-white via-white to-slate-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950';
@@ -43,6 +44,14 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   if (!project) {
     notFound();
   }
+
+  const otherProjects = projects
+    .filter(({ slug: otherSlug }) => otherSlug !== project.slug)
+    .slice(0, 3);
+
+  const logoBackgroundStyle = project.logoBackgroundColor
+    ? { backgroundColor: project.logoBackgroundColor }
+    : undefined;
 
   return (
     <main className="relative min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-white">
@@ -116,7 +125,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-[0_28px_100px_-70px_rgba(15,23,42,0.4)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-[0_40px_130px_-90px_rgba(0,0,0,1)]">
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-[#1F8BC4]/0 opacity-60" />
-            <figure className="relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white p-6 dark:border-white/10 dark:bg-white">
+            <figure
+              className="relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white p-6 dark:border-white/10 dark:bg-white"
+              style={logoBackgroundStyle}
+            >
               <Image
                 src={project.heroImage.src}
                 alt={project.heroImage.alt}
@@ -154,48 +166,12 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
             </div>
           </div>
 
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {projectDetails
-              .filter(({ slug: otherSlug }) => otherSlug !== project.slug)
-              .slice(0, 3)
-              .map((otherProject) => (
-                <Link
-                  key={otherProject.slug}
-                  href={`/projects/${otherProject.slug}`}
-                  className="group relative flex h-full flex-col rounded-2xl border border-slate-200/70 bg-white/70 p-6 shadow-[0_22px_80px_-65px_rgba(15,23,42,0.38)] transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_26px_95px_-70px_rgba(31,139,196,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-white/10 dark:bg-white/5 dark:shadow-[0_32px_110px_-85px_rgba(0,0,0,0.95)]"
-                >
-                  <div className="absolute inset-x-6 top-0 h-1 rounded-b-full bg-gradient-to-r from-primary/0 via-primary/70 to-[#1F8BC4]/0 opacity-0 transition duration-300 group-hover:opacity-100" />
-                  <div className="flex flex-1 flex-col gap-4">
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{otherProject.title}</h3>
-                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2">
-                        Ver detalle
-                        <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">
-                          →
-                        </span>
-                      </span>
-                    </div>
-                    <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200/90">{otherProject.summary}</p>
-                    {otherProject.technologies?.length ? (
-                      <div className="flex flex-wrap gap-2">
-                        {otherProject.technologies.slice(0, 3).map((tech) => (
-                          <span
-                            key={tech}
-                            className="rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 backdrop-blur dark:border-white/10 dark:bg-white/10 dark:text-slate-100"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                        {otherProject.technologies.length > 3 ? (
-                          <span className="rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-                            +{otherProject.technologies.length - 3}
-                          </span>
-                        ) : null}
-                      </div>
-                    ) : null}
-                  </div>
-                </Link>
-              ))}
+          <div className="mt-8 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+            {otherProjects.map((otherProject) => (
+              <div key={otherProject.slug} className="h-full">
+                <ProjectCard project={otherProject} />
+              </div>
+            ))}
           </div>
         </section>
       </div>
