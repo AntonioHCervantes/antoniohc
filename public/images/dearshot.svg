@@ -1,0 +1,156 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="canvasBg" x1="64" y1="56" x2="448" y2="456" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F7FF" />
+      <stop offset="1" stop-color="#E8EEFB" />
+    </linearGradient>
+    <linearGradient id="photoA" x1="120" y1="122" x2="396" y2="342" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#93C5FD" />
+      <stop offset="1" stop-color="#C4B5FD" />
+    </linearGradient>
+    <linearGradient id="photoB" x1="118" y1="112" x2="390" y2="336" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#67E8F9" />
+      <stop offset="1" stop-color="#FDE68A" />
+    </linearGradient>
+    <linearGradient id="photoC" x1="124" y1="118" x2="402" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60A5FA" />
+      <stop offset="1" stop-color="#F9A8D4" />
+    </linearGradient>
+    <linearGradient id="cameraBody" x1="110" y1="180" x2="404" y2="406" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF3B0" />
+      <stop offset="0.44" stop-color="#FFE4A2" />
+      <stop offset="1" stop-color="#7CE7E5" />
+    </linearGradient>
+    <linearGradient id="lensRing" x1="190" y1="214" x2="323" y2="347" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E295E" />
+      <stop offset="0.5" stop-color="#243B78" />
+      <stop offset="1" stop-color="#1A2C57" />
+    </linearGradient>
+    <linearGradient id="heartFill" x1="212" y1="256" x2="263" y2="309" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF37C" />
+      <stop offset="0.58" stop-color="#FFC93D" />
+      <stop offset="1" stop-color="#FFAA1D" />
+    </linearGradient>
+    <filter id="cardShadow" x="58" y="74" width="396" height="366" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" />
+      <feGaussianBlur stdDeviation="10" />
+      <feColorMatrix
+        values="0 0 0 0 0.0588235 0 0 0 0 0.113725 0 0 0 0 0.239216 0 0 0 0.16 0"
+      />
+      <feBlend in2="SourceGraphic" result="shape" />
+    </filter>
+    <filter id="cameraShadow" x="82" y="124" width="348" height="320" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" />
+      <feGaussianBlur stdDeviation="7" />
+      <feColorMatrix
+        values="0 0 0 0 0.0313725 0 0 0 0 0.0941176 0 0 0 0 0.207843 0 0 0 0.22 0"
+      />
+      <feBlend in2="SourceGraphic" result="shape" />
+    </filter>
+  </defs>
+
+  <rect x="24" y="24" width="464" height="464" rx="108" fill="url(#canvasBg)" />
+  <rect x="24" y="24" width="464" height="464" rx="108" stroke="#D7E3FA" stroke-width="2" />
+
+  <g filter="url(#cardShadow)" opacity="0.92">
+    <rect
+      x="122"
+      y="122"
+      width="268"
+      height="220"
+      rx="24"
+      transform="rotate(-10 122 122)"
+      fill="white"
+      stroke="#DFE7F8"
+      stroke-width="4"
+    />
+    <rect
+      x="139"
+      y="145"
+      width="233"
+      height="176"
+      rx="18"
+      transform="rotate(-10 139 145)"
+      fill="url(#photoA)"
+      fill-opacity="0.9"
+    />
+
+    <rect
+      x="136"
+      y="110"
+      width="268"
+      height="220"
+      rx="24"
+      transform="rotate(8 136 110)"
+      fill="white"
+      stroke="#DFE7F8"
+      stroke-width="4"
+    />
+    <rect
+      x="154"
+      y="132"
+      width="233"
+      height="176"
+      rx="18"
+      transform="rotate(8 154 132)"
+      fill="url(#photoB)"
+      fill-opacity="0.9"
+    />
+
+    <rect
+      x="104"
+      y="148"
+      width="268"
+      height="220"
+      rx="24"
+      transform="rotate(-16 104 148)"
+      fill="white"
+      stroke="#DFE7F8"
+      stroke-width="4"
+    />
+    <rect
+      x="122"
+      y="171"
+      width="233"
+      height="176"
+      rx="18"
+      transform="rotate(-16 122 171)"
+      fill="url(#photoC)"
+      fill-opacity="0.78"
+    />
+  </g>
+
+  <g filter="url(#cameraShadow)">
+    <path
+      d="M108 231C108 204.49 129.49 183 156 183H189L206 163C212.451 155.411 221.903 151.036 231.864 151H280.136C290.097 151.036 299.549 155.411 306 163L323 183H356C382.51 183 404 204.49 404 231V355C404 381.51 382.51 403 356 403H156C129.49 403 108 381.51 108 355V231Z"
+      fill="url(#cameraBody)"
+      stroke="#2F3F5D"
+      stroke-width="4"
+    />
+
+    <rect x="128" y="196" width="44" height="16" rx="8" fill="#5A6B87" stroke="#2F3F5D" stroke-width="3" />
+    <rect x="336" y="194" width="34" height="16" rx="5" fill="#FFD776" stroke="#E8A900" stroke-width="2.5" />
+
+    <circle cx="256" cy="280" r="96" fill="#F7FAFF" stroke="#2F3F5D" stroke-width="3" />
+    <circle cx="256" cy="280" r="80" fill="#E6EEFF" stroke="#AFC2EA" stroke-width="3" />
+    <circle cx="256" cy="280" r="66" fill="url(#lensRing)" />
+    <circle cx="256" cy="280" r="50" fill="#0F1D45" fill-opacity="0.42" />
+
+    <path
+      d="M232 303C232 303 208 282 208 262C208 247.641 219.641 236 234 236C243.514 236 251.852 241.112 256 248.764C260.148 241.112 268.486 236 278 236C292.359 236 304 247.641 304 262C304 282 280 303 256 318C242 310 232 303 232 303Z"
+      fill="url(#heartFill)"
+      stroke="#D08A00"
+      stroke-width="2"
+    />
+
+    <circle cx="224" cy="256" r="5" fill="#FFFDE4" />
+    <ellipse cx="269" cy="253" rx="12" ry="8" fill="#FFFDE4" fill-opacity="0.85" />
+  </g>
+
+  <g fill="#F7D978">
+    <path d="M109 111L115 126L130 132L115 138L109 153L103 138L88 132L103 126L109 111Z" />
+    <path d="M156 94L160 103L169 107L160 111L156 120L152 111L143 107L152 103L156 94Z" />
+    <path d="M399 117L403 126L412 130L403 134L399 143L395 134L386 130L395 126L399 117Z" />
+    <path d="M423 143L425.8 149.2L432 152L425.8 154.8L423 161L420.2 154.8L414 152L420.2 149.2L423 143Z" />
+  </g>
+</svg>

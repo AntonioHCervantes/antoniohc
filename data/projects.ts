@@ -47,12 +47,14 @@ export const projectDetails: ProjectDetail[] = [
       {
         label: 'Plan diario',
         value: 'Mis tareas + Mi día',
-        description: 'Backlog claro y selección diaria con etiquetas, prioridades y tarea principal.',
+        description:
+          'Backlog claro y selección diaria con etiquetas, prioridades y tarea principal.',
       },
       {
         label: 'Foco',
         value: 'Timer + avisos',
-        description: 'Bloques de concentración al poner una tarea En progreso y recordatorio antes de terminar la jornada.',
+        description:
+          'Bloques de concentración al poner una tarea En progreso y recordatorio antes de terminar la jornada.',
       },
     ],
   },
@@ -90,17 +92,20 @@ export const projectDetails: ProjectDetail[] = [
       {
         label: 'Ventas',
         value: 'Stock agotado',
-        description: 'El primer lote se vendió por completo en Amazon tras el lanzamiento del producto. El producto fue bien acogido, aunque fue dificil posicionarlo en las palabras de búsqueda claves debido a la competencia, tuve que gestionar todo el proceso de publicidad en la plataforma para posicionarlo.',
+        description:
+          'El primer lote se vendió por completo en Amazon tras el lanzamiento del producto. El producto fue bien acogido, aunque fue dificil posicionarlo en las palabras de búsqueda claves debido a la competencia, tuve que gestionar todo el proceso de publicidad en la plataforma para posicionarlo.',
       },
       {
         label: 'Cadena de valor',
         value: 'Fabricación a entrega',
-        description: 'Negociación con fábrica china, control de calidad, certificado en laboratorio, producción supervisada, importación en Barco y distribución en España. Una auténtica aventura con mil problemas por el camino que tuve que ir resolviendo.',
+        description:
+          'Negociación con fábrica china, control de calidad, certificado en laboratorio, producción supervisada, importación en Barco y distribución en España. Una auténtica aventura con mil problemas por el camino que tuve que ir resolviendo.',
       },
       {
         label: 'Aprendizaje',
         value: 'Ecommerce integral',
-        description: 'Experiencia end-to-end: branding, landing, optimización de listings y gestión logística internacional.',
+        description:
+          'Experiencia end-to-end: branding, landing, optimización de listings y gestión logística internacional.',
       },
     ],
   },
@@ -130,35 +135,35 @@ export const projectDetails: ProjectDetail[] = [
     content: [
       {
         title: 'Rol y objetivo',
-        body:
-          'Creé un GPT propio dentro de ChatGPT para actuar como personal shopper de regalos. El objetivo: reducir la fricción de buscar ideas y entregar opciones comprables sin salir del chat.',
+        body: 'Creé un GPT propio dentro de ChatGPT para actuar como personal shopper de regalos. El objetivo: reducir la fricción de buscar ideas y entregar opciones comprables sin salir del chat.',
       },
       {
         title: 'Flujo conversacional guiado',
-        body:
-          'El asistente pregunta primero en qué marketplace de Amazon comprar (ES, US, UK, DE, FR, IT, MX), luego quién recibe el regalo, sus gustos, ocasión y rango de presupuesto. Con esa información devuelve una lista breve de recomendaciones con descripciones claras y enlaces reales.',
+        body: 'El asistente pregunta primero en qué marketplace de Amazon comprar (ES, US, UK, DE, FR, IT, MX), luego quién recibe el regalo, sus gustos, ocasión y rango de presupuesto. Con esa información devuelve una lista breve de recomendaciones con descripciones claras y enlaces reales.',
       },
       {
         title: 'Integración técnica',
-        body:
-          'Conecté el GPT a la API de Productos de Amazon mediante una Action con autenticación propia para cada mercado. El sistema mapea respuestas a consultas parametrizadas (categoría, precio, valoraciones) y controla moneda y disponibilidad antes de mostrar el enlace acortado al usuario.',
+        body: 'Conecté el GPT a la API de Productos de Amazon mediante una Action con autenticación propia para cada mercado. El sistema mapea respuestas a consultas parametrizadas (categoría, precio, valoraciones) y controla moneda y disponibilidad antes de mostrar el enlace acortado al usuario.',
       },
     ],
     results: [
       {
         label: 'Mercados',
         value: '7 Amazon locales',
-        description: 'Compatible con ES, US, UK, DE, FR, IT y MX para devolver precios y disponibilidad correctos.',
+        description:
+          'Compatible con ES, US, UK, DE, FR, IT y MX para devolver precios y disponibilidad correctos.',
       },
       {
         label: 'Recomendaciones',
         value: 'Top 5-7',
-        description: 'Entrega una lista corta de ideas filtradas por gustos y presupuesto en menos de 10 segundos.',
+        description:
+          'Entrega una lista corta de ideas filtradas por gustos y presupuesto en menos de 10 segundos.',
       },
       {
         label: 'Enlaces',
         value: '100% comprobados',
-        description: 'Cada sugerencia llega con URL final a Amazon y aviso de moneda para evitar sorpresas en la compra.',
+        description:
+          'Cada sugerencia llega con URL final a Amazon y aviso de moneda para evitar sorpresas en la compra.',
       },
     ],
   },
@@ -199,12 +204,14 @@ export const projectDetails: ProjectDetail[] = [
       {
         label: 'Recetas',
         value: 'Premium + propias',
-        description: 'Recetas curadas, familiares, compartidas y generadas con IA en un solo catálogo.',
+        description:
+          'Recetas curadas, familiares, compartidas y generadas con IA en un solo catálogo.',
       },
       {
         label: 'Compra',
         value: 'Lista automática',
-        description: 'Ingredientes calculados desde el menú, con items personalizados y estado de compra.',
+        description:
+          'Ingredientes calculados desde el menú, con items personalizados y estado de compra.',
       },
     ],
   },
@@ -243,17 +250,79 @@ export const projectDetails: ProjectDetail[] = [
       {
         label: 'Familias',
         value: '+1.000',
-        description: 'Más de 1.000 familias llegaron a usar Kuicco para guardar y compartir recuerdos.',
+        description:
+          'Más de 1.000 familias llegaron a usar Kuicco para guardar y compartir recuerdos.',
       },
       {
         label: 'Plataformas',
         value: 'Web, iOS y Android',
-        description: 'Álbumes sincronizados y accesibles tanto desde la web como desde las apps móviles.',
+        description:
+          'Álbumes sincronizados y accesibles tanto desde la web como desde las apps móviles.',
       },
       {
         label: 'Modelo',
         value: 'Freemium',
-        description: 'Prueba inicial de 30 días y plan premium con almacenamiento ampliado e invitaciones ilimitadas.',
+        description:
+          'Prueba inicial de 30 días y plan premium con almacenamiento ampliado e invitaciones ilimitadas.',
+      },
+    ],
+  },
+  {
+    slug: 'dearshot',
+    title: 'Dearshot',
+    description:
+      'Álbumes privados para fotos y vídeos de familia y viajes, organizados en tu propio Google Drive y compartidos solo con quien elijas.',
+    summary:
+      'Dearshot reúne recuerdos familiares y de viaje en álbumes privados fáciles de organizar y compartir. Las fotos y vídeos permanecen en el Google Drive del usuario; la aplicación ofrece una experiencia sencilla y acceso controlado por invitación.',
+    imageUrl: '/images/dearshot.svg',
+    logoBackgroundColor: '#F4F7FF',
+    heroImage: {
+      src: '/images/dearshot.svg',
+      alt: 'Ilustración del logotipo de Dearshot: una cámara con un corazón rodeada de fotografías.',
+    },
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Firebase',
+      'Google Drive API',
+    ],
+    liveUrl: 'https://dearshot.com/es',
+    liveCta: 'Visitar Dearshot',
+    content: [
+      {
+        title: 'Problema y propuesta',
+        body: 'Dearshot propone un espacio privado para conservar y compartir fotos y vídeos de familia y viajes, sin recurrir a un feed público. Reúne la experiencia de los álbumes con archivos alojados en el Google Drive de cada usuario, para evitar gestionar la organización y el acceso directamente desde Drive.',
+      },
+      {
+        title: 'Álbumes y organización',
+        body: 'La aplicación permite crear álbumes familiares y de viaje, cargar momentos y organizarlos automáticamente dentro de la carpeta de Dearshot en el Drive del usuario. Así, las fotos y los vídeos permanecen en su cuenta mientras se consultan desde los álbumes.',
+      },
+      {
+        title: 'Privacidad y colaboración',
+        body: 'Los álbumes se comparten con invitaciones o enlaces. La persona propietaria administra los permisos de visualización o edición para las personas invitadas; no se trata de publicar recuerdos en un feed abierto.',
+      },
+      {
+        title: 'Tecnología',
+        body: 'Dearshot es una aplicación web construida con Next.js, React, TypeScript y Tailwind CSS. Utiliza Firebase Auth y Firestore, e integra Google Drive API para trabajar con los archivos de la cuenta del usuario.',
+      },
+    ],
+    results: [
+      {
+        label: 'Privacidad',
+        value: 'Álbumes privados',
+        description: 'Acceso a personas invitadas en lugar de un feed público.',
+      },
+      {
+        label: 'Archivos',
+        value: 'Tu Google Drive',
+        description: 'Las fotos y vídeos se conservan en la cuenta de Drive del usuario.',
+      },
+      {
+        label: 'Organización',
+        value: 'Familia y viajes',
+        description: 'Los momentos se agrupan en álbumes fáciles de consultar y compartir.',
       },
     ],
   },
@@ -276,38 +345,38 @@ export const projectDetails: ProjectDetail[] = [
     content: [
       {
         title: 'Rol y objetivo',
-        body:
-          'Junto a un grupo de amigos construimos un recomendador capaz de acotar miles de títulos a unas pocas sugerencias afinadas. Me encargué del front-end completo: maqueté la búsqueda guiada, los listados y las transiciones para que el usuario percibiera velocidad y claridad desde el primer clic.',
+        body: 'Junto a un grupo de amigos construimos un recomendador capaz de acotar miles de títulos a unas pocas sugerencias afinadas. Me encargué del front-end completo: maqueté la búsqueda guiada, los listados y las transiciones para que el usuario percibiera velocidad y claridad desde el primer clic.',
       },
       {
         title: 'Cómo funciona',
-        body:
-          'El motor aplica filtrado colaborativo con factorizar matrices y embeddings de familia exponencial para predecir las valoraciones que un usuario daría a cada juego. Usa el histórico de ratings de BoardGameGeek y devuelve recomendaciones en función de similitud entre perfiles.',
+        body: 'El motor aplica filtrado colaborativo con factorizar matrices y embeddings de familia exponencial para predecir las valoraciones que un usuario daría a cada juego. Usa el histórico de ratings de BoardGameGeek y devuelve recomendaciones en función de similitud entre perfiles.',
       },
       {
         title: 'Stack y experiencia visual',
-        body:
-          'Desarrolle la capa frontend con CodeIgniter consumiendo el API que proveía la información necesaria para las recomendaciones. Utilicé JavaScript y jQuery para autocompletados, filtros dinámicos y paginación sin recargar. Diseñé la capa visual con Bootstrap y utilidades CSS para mantener la interfaz accesible y rápida en escritorio y móvil.',
+        body: 'Desarrolle la capa frontend con CodeIgniter consumiendo el API que proveía la información necesaria para las recomendaciones. Utilicé JavaScript y jQuery para autocompletados, filtros dinámicos y paginación sin recargar. Diseñé la capa visual con Bootstrap y utilidades CSS para mantener la interfaz accesible y rápida en escritorio y móvil.',
       },
     ],
     results: [
       {
         label: 'Catálogo',
         value: '70k+ juegos',
-        description: 'El sistema consume el dataset de BoardGameGeek para cubrir mecánicas, categorías y ediciones.',
+        description:
+          'El sistema consume el dataset de BoardGameGeek para cubrir mecánicas, categorías y ediciones.',
       },
       {
         label: 'Experiencia',
         value: 'Recomendaciones en 3 pasos',
-        description: 'Búsqueda inicial, afinado por gustos y entrega de sugerencias listas para explorar sin fricciones.',
+        description:
+          'Búsqueda inicial, afinado por gustos y entrega de sugerencias listas para explorar sin fricciones.',
       },
       {
         label: 'Contribución',
         value: 'Front-end lead',
-        description: 'Fuí el responsable del desarrollo frontend y realizar la integración con el motor de recomendaciones.',
+        description:
+          'Fuí el responsable del desarrollo frontend y realizar la integración con el motor de recomendaciones.',
       },
     ],
-  }
+  },
 ];
 
 export const projects: Project[] = projectDetails.map(
