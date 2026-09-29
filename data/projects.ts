@@ -2,6 +2,57 @@ import type { Project, ProjectDetail } from '@/lib/types/project';
 
 export const projectDetails: ProjectDetail[] = [
   {
+    slug: 'dearshot',
+    title: 'Dearshot',
+    description:
+      'Álbumes privados para fotos y vídeos de familia y viajes, organizados en el Google Drive del usuario y compartidos con personas invitadas.',
+    summary:
+      'Dearshot reúne fotos y vídeos de familia y viajes en álbumes privados, organizados en el Google Drive de quien los crea y compartidos con las personas invitadas.',
+    imageUrl: '/images/dearshot-logo.svg',
+    heroImage: {
+      src: '/images/dearshot-logo.svg',
+      alt: 'Logotipo de Dearshot',
+    },
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Google Drive API'],
+    liveUrl: 'https://dearshot.com/es',
+    liveCta: 'Visitar Dearshot',
+    content: [
+      {
+        title: 'Una propuesta para compartir recuerdos',
+        body: 'Dearshot reúne fotos y vídeos de familia y viajes en álbumes privados, organizados en Google Drive y compartidos con las personas invitadas.',
+      },
+      {
+        title: 'Organización de álbumes',
+        body: 'Los álbumes permiten reunir fotos y vídeos de familia y viajes. El contenido se organiza en el Google Drive de quien crea los álbumes.',
+      },
+      {
+        title: 'Privacidad y colaboración',
+        body: 'La colaboración se basa en compartir los álbumes con personas invitadas. El contenido se organiza en el Google Drive de quien los crea.',
+      },
+      {
+        title: 'Tecnología',
+        body: 'El producto está construido con Next.js, React, TypeScript y Tailwind CSS, y utiliza Firebase y Google Drive API.',
+      },
+    ],
+    results: [
+      {
+        label: 'Álbumes',
+        value: 'Familia y viajes',
+        description: 'Fotos y vídeos reunidos en álbumes privados.',
+      },
+      {
+        label: 'Organización',
+        value: 'Google Drive',
+        description: 'El contenido se organiza en el Drive de quien crea los álbumes.',
+      },
+      {
+        label: 'Colaboración',
+        value: 'Personas invitadas',
+        description: 'Álbumes compartidos con las personas invitadas.',
+      },
+    ],
+  },
+  {
     slug: 'check-planner',
     title: 'CheckPlanner',
     description:
